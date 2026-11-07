@@ -14,7 +14,7 @@ const COLLECTIONS = [
 // Coleções sem entrada aqui são tratadas como dado de referência (todos os campos via $set).
 const MANAGED_FIELDS = {
   players: ['clubId', 'name', 'slug', 'category', 'shirtNumber', 'positionLabel', 'positionGroup',
-            'positions', 'squadStatus', 'externalIds', 'sourceRefs', 'lastVerifiedAt'],
+            'positions', 'squadStatus', 'externalIds', 'dataCompleteness', 'sourceRefs', 'lastVerifiedAt'],
 };
 
 const str = { bsonType: 'string' };

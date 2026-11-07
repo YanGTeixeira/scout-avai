@@ -42,5 +42,16 @@
     "scope": "Registros de atletas da Série B 2026. Pode listar atletas que já deixaram o clube; não usada para declarar elenco atual.",
     "usedInLoad": false,
     "collectedAt": null
+  },
+  {
+    "_id": "src-espn-avai-plantel-2026",
+    "name": "ESPN Deportes — Plantel do Avaí 2026 (Série B)",
+    "type": "media_stats",
+    "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+    "publisher": "ESPN Deportes",
+    "reliability": "medium",
+    "scope": "Jogos, entradas como reserva, gols, assistências, finalizações, faltas, cartões e defesas por atleta na Série B 2026. Sem minutos. Atletas sem dados aparecem como \"--\".",
+    "usedInLoad": true,
+    "collectedAt": "2026-11-07"
   }
 ]

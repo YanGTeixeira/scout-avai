@@ -18,7 +18,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "kaua-santos"
+      "avaiSite": "kaua-santos",
+      "espn": "3094290"
     },
     "fullName": null,
     "birthDate": null,
@@ -32,7 +33,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -62,7 +63,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "filipinho"
+      "avaiSite": "filipinho",
+      "espn": "381283"
     },
     "fullName": null,
     "birthDate": null,
@@ -76,7 +78,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -106,7 +108,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "rildo"
+      "avaiSite": "rildo",
+      "espn": "304530"
     },
     "fullName": null,
     "birthDate": null,
@@ -120,7 +123,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -150,7 +153,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "vinicius-immig"
+      "avaiSite": "vinicius-immig",
+      "espn": "3094244"
     },
     "fullName": null,
     "birthDate": null,
@@ -164,7 +168,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -194,7 +198,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "caio-suasuna"
+      "avaiSite": "caio-suasuna",
+      "espn": "417809"
     },
     "fullName": null,
     "birthDate": null,
@@ -208,7 +213,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -238,7 +243,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "gabriel-cipriano"
+      "avaiSite": "gabriel-cipriano",
+      "espn": "3093330"
     },
     "fullName": null,
     "birthDate": null,
@@ -252,7 +258,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -282,7 +288,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "leo-chu"
+      "avaiSite": "leo-chu",
+      "espn": "300110"
     },
     "fullName": null,
     "birthDate": null,
@@ -296,7 +303,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -326,7 +333,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "juan-rocha"
+      "avaiSite": "juan-rocha",
+      "espn": "419976"
     },
     "fullName": null,
     "birthDate": null,
@@ -340,7 +348,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -370,7 +378,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "leo-gamalho"
+      "avaiSite": "leo-gamalho",
+      "espn": "77833"
     },
     "fullName": null,
     "birthDate": null,
@@ -384,7 +393,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -414,7 +423,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "william"
+      "avaiSite": "william",
+      "espn": "417438"
     },
     "fullName": null,
     "birthDate": null,
@@ -428,7 +438,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -458,7 +468,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "joao-vitor-3"
+      "avaiSite": "joao-vitor-3",
+      "espn": "379367"
     },
     "fullName": null,
     "birthDate": null,
@@ -472,7 +483,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -502,7 +513,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "pedrao-2"
+      "avaiSite": "pedrao-2",
+      "espn": "341413"
     },
     "fullName": null,
     "birthDate": null,
@@ -516,7 +528,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -546,7 +558,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "reynaldo"
+      "avaiSite": "reynaldo",
+      "espn": "254373"
     },
     "fullName": null,
     "birthDate": null,
@@ -560,7 +573,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -590,7 +603,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "bruno-ferreira"
+      "avaiSite": "bruno-ferreira",
+      "espn": "218903"
     },
     "fullName": null,
     "birthDate": null,
@@ -604,7 +618,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -634,7 +648,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "isaias"
+      "avaiSite": "isaias",
+      "espn": "398626"
     },
     "fullName": null,
     "birthDate": null,
@@ -648,7 +663,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -678,7 +693,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "wenderson"
+      "avaiSite": "wenderson",
+      "espn": "303480"
     },
     "fullName": null,
     "birthDate": null,
@@ -692,7 +708,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -722,7 +738,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "jefferson-maciel"
+      "avaiSite": "jefferson-maciel",
+      "espn": "318259"
     },
     "fullName": null,
     "birthDate": null,
@@ -736,7 +753,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -766,7 +783,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "paulo-vitor"
+      "avaiSite": "paulo-vitor",
+      "espn": "361977"
     },
     "fullName": null,
     "birthDate": null,
@@ -780,7 +798,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -810,7 +828,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "luiz-henrique"
+      "avaiSite": "luiz-henrique",
+      "espn": "94225"
     },
     "fullName": null,
     "birthDate": null,
@@ -824,7 +843,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -854,7 +873,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "guilherme-aquino"
+      "avaiSite": "guilherme-aquino",
+      "espn": "384024"
     },
     "fullName": null,
     "birthDate": null,
@@ -868,7 +888,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -898,7 +918,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "hyan"
+      "avaiSite": "hyan",
+      "espn": "381152"
     },
     "fullName": null,
     "birthDate": null,
@@ -912,7 +933,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -942,7 +963,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "kevin-2"
+      "avaiSite": "kevin-2",
+      "espn": "415070"
     },
     "fullName": null,
     "birthDate": null,
@@ -956,7 +978,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1030,7 +1052,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "daniel-penha"
+      "avaiSite": "daniel-penha",
+      "espn": "250594"
     },
     "fullName": null,
     "birthDate": null,
@@ -1044,7 +1067,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1074,7 +1097,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "gabriel-simples"
+      "avaiSite": "gabriel-simples",
+      "espn": "418219"
     },
     "fullName": null,
     "birthDate": null,
@@ -1088,7 +1112,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1118,7 +1142,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "allison"
+      "avaiSite": "allison",
+      "espn": "289788"
     },
     "fullName": null,
     "birthDate": null,
@@ -1132,7 +1157,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1162,7 +1187,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "wallison"
+      "avaiSite": "wallison",
+      "espn": "333813"
     },
     "fullName": null,
     "birthDate": null,
@@ -1176,7 +1202,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1206,7 +1232,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "del-piage"
+      "avaiSite": "del-piage",
+      "espn": "302578"
     },
     "fullName": null,
     "birthDate": null,
@@ -1220,7 +1247,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1250,7 +1277,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "dg"
+      "avaiSite": "dg",
+      "espn": "314568"
     },
     "fullName": null,
     "birthDate": null,
@@ -1264,7 +1292,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1294,7 +1322,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "quaresma"
+      "avaiSite": "quaresma",
+      "espn": "216096"
     },
     "fullName": null,
     "birthDate": null,
@@ -1308,7 +1337,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1338,7 +1367,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "ze-ricardo"
+      "avaiSite": "ze-ricardo",
+      "espn": "234886"
     },
     "fullName": null,
     "birthDate": null,
@@ -1352,7 +1382,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1382,7 +1412,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "jean-lucas"
+      "avaiSite": "jean-lucas",
+      "espn": "265250"
     },
     "fullName": null,
     "birthDate": null,
@@ -1396,7 +1427,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1470,7 +1501,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "otavio"
+      "avaiSite": "otavio",
+      "espn": "333867"
     },
     "fullName": null,
     "birthDate": null,
@@ -1484,7 +1516,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {
@@ -1514,7 +1546,8 @@
     ],
     "squadStatus": "listed_on_official_page",
     "externalIds": {
-      "avaiSite": "igor-bohn"
+      "avaiSite": "igor-bohn",
+      "espn": "256088"
     },
     "fullName": null,
     "birthDate": null,
@@ -1528,7 +1561,7 @@
       "identity": "partial",
       "physical": "missing",
       "contract": "missing",
-      "statistics": "missing"
+      "statistics": "partial"
     },
     "sourceRefs": [
       {

@@ -28,20 +28,25 @@ const MAPS = {
   players: {
     coll: 'players', sort: { createdAt: 1, _id: 1 },
     toUI: (d, ctx) => {
-      const ms = f => (d.manualStats && d.manualStats[f] != null) ? d.manualStats[f] : '';
+      const st = (ctx.stats && ctx.stats[d._id]) || {};
+      const ms = f => (d.manualStats && d.manualStats[f] != null) ? d.manualStats[f] : (st[f] != null ? st[f] : '');
       return { id: d._id, name: d.name || '', birth: d.birthDate || '', club: ctx.clubs[d.clubId] || '', category: CAT[d.category] || d.category || '',
         position: d.positionLabel || '', foot: d.preferredFoot || 'Não informado', season: ms('season'), status: d.uiStatus || 'Elenco',
         height: d.heightCm == null ? '' : d.heightCm, minutes: ms('minutes'), goals: ms('goals'), assists: ms('assists'), notes: d.notes || '' };
     },
     fromUI: async (p, id, ctx) => {
       const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1 } });
+      const off = await ctx.db.collection('player_season_stats').findOne({ playerId: id, competitionId: 'comp-serie-b', seasonId: 'season-serie-b-2026' });
+      const o = (off && off.stats) || {};
+      // só grava como "manual" o que difere do dado oficial carregado do provedor
+      const manual = (v, official) => (num(v) === (official == null ? null : official)) ? null : num(v);
       const clubId = p.club ? 'club-' + slug(p.club) : null;
       if (clubId) await ctx.db.collection('clubs').updateOne({ _id: clubId }, { $setOnInsert: { name: p.club, shortName: p.club, city: null, state: null, country: 'BR', sourceRefs: [{ sourceId: MANUAL_SRC, collectedAt: today() }], lastVerifiedAt: null, createdAt: ctx.now } }, { upsert: true });
       const label = p.position || null;
       const positions = label ? [{ label, group: GROUP[label] || null, isPrimary: true, sourceId: MANUAL_SRC }] : [];
       const set = { name: p.name, birthDate: nz(p.birth), clubId, category: slug(p.category), positionLabel: label, positionGroup: GROUP[label] || null,
         preferredFoot: (!p.foot || p.foot === 'Não informado') ? null : p.foot, uiStatus: p.status || 'Elenco', heightCm: num(p.height),
-        manualStats: { season: nz(p.season), minutes: num(p.minutes), goals: num(p.goals), assists: num(p.assists) }, notes: p.notes || '' };
+        manualStats: { season: nz(p.season), minutes: manual(p.minutes, off && off.minutes), goals: manual(p.goals, o.goals), assists: manual(p.assists, o.assists) }, notes: p.notes || '' };
       const soi = { slug: slug(p.name) + '-' + String(id).slice(0, 6), shirtNumber: null, fullName: null, nationality: null, weightKg: null, contract: null, statistics: [],
         squadStatus: 'manual_entry', externalIds: {}, dataCompleteness: { identity: 'partial', physical: 'missing', contract: 'missing', statistics: 'missing' },
         sourceRefs: [{ sourceId: MANUAL_SRC, collectedAt: today() }], lastVerifiedAt: null };
@@ -77,10 +82,14 @@ const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 async function getState() {
   const clubs = {};
   (await db.collection('clubs').find({}, { projection: { name: 1, shortName: 1 } }).toArray()).forEach(c => { clubs[c._id] = c.shortName || c.name; });
+  const stats = {};
+  (await db.collection('player_season_stats').find({ competitionId: 'comp-serie-b', seasonId: 'season-serie-b-2026' }).toArray()).forEach(x => {
+    stats[x.playerId] = { season: '2026', minutes: x.minutes, goals: x.stats && x.stats.goals, assists: x.stats && x.stats.assists };
+  });
   const out = {};
   for (const key of Object.keys(MAPS)) {
     const docs = await db.collection(MAPS[key].coll).find({}).sort(MAPS[key].sort).toArray();
-    out[key] = docs.map(d => MAPS[key].toUI(d, { clubs }));
+    out[key] = docs.map(d => MAPS[key].toUI(d, { clubs, stats }));
   }
   const t = await db.collection('tactical_profiles').findOne({ _id: 'avai-current' });
   out.tactical = t ? { text: t.modelText || '', formation: t.formation || '', pressing: t.pressing || '' } : {};

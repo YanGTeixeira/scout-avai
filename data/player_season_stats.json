@@ -1,1 +1,1979 @@
-[]
+[
+  {
+    "_id": "pss-kaua-santos-serie-b-2026-espn",
+    "playerId": "avai-pro-kaua-santos",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "3094290",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 3,
+      "substituteAppearances": 3,
+      "goals": 0,
+      "assists": 0,
+      "shots": 2,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 1,
+      "foulsSuffered": 2,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Kauã Gabriel Pereira Dos Santos",
+      "espnShirt": 30,
+      "rosterShirt": 30
+    },
+    "needsReview": true,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-filipinho-serie-b-2026-espn",
+    "playerId": "avai-pro-filipinho",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "381283",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 1,
+      "substituteAppearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Filipe",
+      "espnShirt": 59,
+      "rosterShirt": 59
+    },
+    "needsReview": true,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-rildo-serie-b-2026-espn",
+    "playerId": "avai-pro-rildo",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "304530",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 5,
+      "substituteAppearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "shots": 2,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 2,
+      "foulsSuffered": 9,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 4
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Rildo",
+      "espnShirt": 37,
+      "rosterShirt": 37
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-vinicius-immig-serie-b-2026-espn",
+    "playerId": "avai-pro-vinicius-immig",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "3094244",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 2,
+      "substituteAppearances": 2,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Vinicius Miguel Immig",
+      "espnShirt": 26,
+      "rosterShirt": 26
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-caio-suasuna-serie-b-2026-espn",
+    "playerId": "avai-pro-caio-suasuna",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "417809",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 8,
+      "substituteAppearances": 1,
+      "goals": 1,
+      "assists": 0,
+      "shots": 8,
+      "shotsOnTarget": 4,
+      "foulsCommitted": 8,
+      "foulsSuffered": 8,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 7
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "name_only",
+      "espnName": "Caio Suassuna",
+      "espnShirt": 19,
+      "rosterShirt": 16
+    },
+    "needsReview": true,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-gabriel-cipriano-serie-b-2026-espn",
+    "playerId": "avai-pro-gabriel-cipriano",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "3093330",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 9,
+      "substituteAppearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shots": 4,
+      "shotsOnTarget": 1,
+      "foulsCommitted": 12,
+      "foulsSuffered": 7,
+      "yellowCards": 1,
+      "redCards": 0,
+      "startsDerived": 2
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "name_only",
+      "espnName": "Gabriel Frederico Cipriano",
+      "espnShirt": 39,
+      "rosterShirt": 23
+    },
+    "needsReview": true,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-leo-chu-serie-b-2026-espn",
+    "playerId": "avai-pro-leo-chu",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "300110",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 8,
+      "substituteAppearances": 5,
+      "goals": 0,
+      "assists": 1,
+      "shots": 3,
+      "shotsOnTarget": 1,
+      "foulsCommitted": 5,
+      "foulsSuffered": 2,
+      "yellowCards": 1,
+      "redCards": 0,
+      "startsDerived": 3
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Léo Chú",
+      "espnShirt": 7,
+      "rosterShirt": 7
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-juan-rocha-serie-b-2026-espn",
+    "playerId": "avai-pro-juan-rocha",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "419976",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 2,
+      "substituteAppearances": 2,
+      "goals": 0,
+      "assists": 1,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Juan Rocha",
+      "espnShirt": 17,
+      "rosterShirt": 17
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-leo-gamalho-serie-b-2026-espn",
+    "playerId": "avai-pro-leo-gamalho",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "77833",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 16,
+      "substituteAppearances": 11,
+      "goals": 1,
+      "assists": 0,
+      "shots": 10,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 8,
+      "foulsSuffered": 10,
+      "yellowCards": 2,
+      "redCards": 0,
+      "startsDerived": 5
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Léo Gamalho",
+      "espnShirt": 9,
+      "rosterShirt": 9
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-william-serie-b-2026-espn",
+    "playerId": "avai-pro-william",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "417438",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 12,
+      "substituteAppearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shots": 5,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 8,
+      "foulsSuffered": 15,
+      "yellowCards": 0,
+      "redCards": 1,
+      "startsDerived": 5
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "William Fernando",
+      "espnShirt": 56,
+      "rosterShirt": 56
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-joao-vitor-3-serie-b-2026-espn",
+    "playerId": "avai-pro-joao-vitor-3",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "379367",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 11,
+      "substituteAppearances": 0,
+      "goals": 0,
+      "assists": 2,
+      "shots": 7,
+      "shotsOnTarget": 1,
+      "foulsCommitted": 14,
+      "foulsSuffered": 17,
+      "yellowCards": 4,
+      "redCards": 0,
+      "startsDerived": 11
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "João Vitor",
+      "espnShirt": 22,
+      "rosterShirt": 22
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-pedrao-2-serie-b-2026-espn",
+    "playerId": "avai-pro-pedrao-2",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "341413",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 2,
+      "substituteAppearances": 2,
+      "goals": 0,
+      "assists": 0,
+      "shots": 2,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Pedro Henrique Franklim Martins",
+      "espnShirt": 35,
+      "rosterShirt": 35
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-reynaldo-serie-b-2026-espn",
+    "playerId": "avai-pro-reynaldo",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "254373",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 12,
+      "substituteAppearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "shots": 2,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 11,
+      "foulsSuffered": 2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "startsDerived": 11
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Reynaldo",
+      "espnShirt": 40,
+      "rosterShirt": 40
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-isaias-serie-b-2026-espn",
+    "playerId": "avai-pro-isaias",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "398626",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 10,
+      "substituteAppearances": 10,
+      "goals": 0,
+      "assists": 0,
+      "shots": 8,
+      "shotsOnTarget": 1,
+      "foulsCommitted": 1,
+      "foulsSuffered": 3,
+      "yellowCards": 1,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Isaías",
+      "espnShirt": 20,
+      "rosterShirt": 20
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-wenderson-serie-b-2026-espn",
+    "playerId": "avai-pro-wenderson",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "303480",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 25,
+      "substituteAppearances": 16,
+      "goals": 1,
+      "assists": 0,
+      "shots": 14,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 11,
+      "foulsSuffered": 19,
+      "yellowCards": 3,
+      "redCards": 0,
+      "startsDerived": 9
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Wenderson",
+      "espnShirt": 95,
+      "rosterShirt": 95
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-jefferson-maciel-serie-b-2026-espn",
+    "playerId": "avai-pro-jefferson-maciel",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "318259",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 16,
+      "substituteAppearances": 1,
+      "goals": 1,
+      "assists": 0,
+      "shots": 10,
+      "shotsOnTarget": 3,
+      "foulsCommitted": 16,
+      "foulsSuffered": 9,
+      "yellowCards": 2,
+      "redCards": 0,
+      "startsDerived": 15
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Jefferson",
+      "espnShirt": 38,
+      "rosterShirt": 38
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-paulo-vitor-serie-b-2026-espn",
+    "playerId": "avai-pro-paulo-vitor",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "361977",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 30,
+      "substituteAppearances": 13,
+      "goals": 2,
+      "assists": 0,
+      "shots": 17,
+      "shotsOnTarget": 7,
+      "foulsCommitted": 37,
+      "foulsSuffered": 17,
+      "yellowCards": 9,
+      "redCards": 0,
+      "startsDerived": 17
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Paulo Vitor",
+      "espnShirt": 25,
+      "rosterShirt": 25
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-luiz-henrique-serie-b-2026-espn",
+    "playerId": "avai-pro-luiz-henrique",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "94225",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 33,
+      "substituteAppearances": 3,
+      "goals": 2,
+      "assists": 0,
+      "shots": 21,
+      "shotsOnTarget": 3,
+      "foulsCommitted": 48,
+      "foulsSuffered": 48,
+      "yellowCards": 6,
+      "redCards": 0,
+      "startsDerived": 30
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Luiz Henrique",
+      "espnShirt": 8,
+      "rosterShirt": 8
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-guilherme-aquino-serie-b-2026-espn",
+    "playerId": "avai-pro-guilherme-aquino",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "384024",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 10,
+      "substituteAppearances": 3,
+      "goals": 0,
+      "assists": 0,
+      "shots": 5,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 13,
+      "foulsSuffered": 3,
+      "yellowCards": 3,
+      "redCards": 0,
+      "startsDerived": 7
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Guilherme Aquino",
+      "espnShirt": 15,
+      "rosterShirt": 15
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-hyan-serie-b-2026-espn",
+    "playerId": "avai-pro-hyan",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "381152",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 8,
+      "substituteAppearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shots": 4,
+      "shotsOnTarget": 3,
+      "foulsCommitted": 1,
+      "foulsSuffered": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "startsDerived": 1
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Hyan",
+      "espnShirt": 18,
+      "rosterShirt": 18
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-kevin-2-serie-b-2026-espn",
+    "playerId": "avai-pro-kevin-2",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "415070",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 0,
+      "substituteAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Kevin",
+      "espnShirt": 90,
+      "rosterShirt": 90
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-daniel-penha-serie-b-2026-espn",
+    "playerId": "avai-pro-daniel-penha",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "250594",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 24,
+      "substituteAppearances": 1,
+      "goals": 6,
+      "assists": 1,
+      "shots": 57,
+      "shotsOnTarget": 22,
+      "foulsCommitted": 24,
+      "foulsSuffered": 35,
+      "yellowCards": 4,
+      "redCards": 1,
+      "startsDerived": 23
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Daniel Penha",
+      "espnShirt": 14,
+      "rosterShirt": 14
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-gabriel-simples-serie-b-2026-espn",
+    "playerId": "avai-pro-gabriel-simples",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "418219",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 7,
+      "substituteAppearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "shots": 3,
+      "shotsOnTarget": 3,
+      "foulsCommitted": 8,
+      "foulsSuffered": 2,
+      "yellowCards": 3,
+      "redCards": 0,
+      "startsDerived": 6
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Gabriel Simples",
+      "espnShirt": 4,
+      "rosterShirt": 4
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-allison-serie-b-2026-espn",
+    "playerId": "avai-pro-allison",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "289788",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 29,
+      "substituteAppearances": 0,
+      "goals": 1,
+      "assists": 1,
+      "shots": 9,
+      "shotsOnTarget": 3,
+      "foulsCommitted": 24,
+      "foulsSuffered": 30,
+      "yellowCards": 6,
+      "redCards": 1,
+      "startsDerived": 29
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Allyson",
+      "espnShirt": 3,
+      "rosterShirt": 3
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-wallison-serie-b-2026-espn",
+    "playerId": "avai-pro-wallison",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "333813",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 24,
+      "substituteAppearances": 8,
+      "goals": 2,
+      "assists": 1,
+      "shots": 25,
+      "shotsOnTarget": 8,
+      "foulsCommitted": 44,
+      "foulsSuffered": 16,
+      "yellowCards": 6,
+      "redCards": 0,
+      "startsDerived": 16
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Wallison",
+      "espnShirt": 2,
+      "rosterShirt": 2
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-del-piage-serie-b-2026-espn",
+    "playerId": "avai-pro-del-piage",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "302578",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 9,
+      "substituteAppearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shots": 6,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 11,
+      "foulsSuffered": 2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "startsDerived": 2
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Del Piage",
+      "espnShirt": 5,
+      "rosterShirt": 5
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-dg-serie-b-2026-espn",
+    "playerId": "avai-pro-dg",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "314568",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 31,
+      "substituteAppearances": 3,
+      "goals": 1,
+      "assists": 1,
+      "shots": 30,
+      "shotsOnTarget": 9,
+      "foulsCommitted": 48,
+      "foulsSuffered": 50,
+      "yellowCards": 15,
+      "redCards": 0,
+      "startsDerived": 28
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Douglas",
+      "espnShirt": 36,
+      "rosterShirt": 36
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-quaresma-serie-b-2026-espn",
+    "playerId": "avai-pro-quaresma",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "216096",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 5,
+      "substituteAppearances": 2,
+      "goals": 0,
+      "assists": 0,
+      "shots": 1,
+      "shotsOnTarget": 0,
+      "foulsCommitted": 4,
+      "foulsSuffered": 3,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 3
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Mateus Quaresma",
+      "espnShirt": 66,
+      "rosterShirt": 66
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-ze-ricardo-serie-b-2026-espn",
+    "playerId": "avai-pro-ze-ricardo",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "234886",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 28,
+      "substituteAppearances": 2,
+      "goals": 0,
+      "assists": 1,
+      "shots": 16,
+      "shotsOnTarget": 2,
+      "foulsCommitted": 38,
+      "foulsSuffered": 24,
+      "yellowCards": 5,
+      "redCards": 1,
+      "startsDerived": 26
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Zé Ricardo",
+      "espnShirt": 77,
+      "rosterShirt": 77
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-jean-lucas-serie-b-2026-espn",
+    "playerId": "avai-pro-jean-lucas",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "265250",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 34,
+      "substituteAppearances": 3,
+      "goals": 3,
+      "assists": 6,
+      "shots": 70,
+      "shotsOnTarget": 17,
+      "foulsCommitted": 48,
+      "foulsSuffered": 35,
+      "yellowCards": 6,
+      "redCards": 0,
+      "startsDerived": 31
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Jean Lucas Figueiredo",
+      "espnShirt": 10,
+      "rosterShirt": 10
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-bruno-ferreira-serie-b-2026-espn",
+    "playerId": "avai-pro-bruno-ferreira",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "218903",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 16,
+      "substituteAppearances": 0,
+      "saves": 49,
+      "goalsConceded": 19,
+      "assists": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 16
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Bruno",
+      "espnShirt": 94,
+      "rosterShirt": 94
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-otavio-serie-b-2026-espn",
+    "playerId": "avai-pro-otavio",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "333867",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 0,
+      "substituteAppearances": 0,
+      "saves": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 0
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "exact",
+      "espnName": "Otávio",
+      "espnShirt": 21,
+      "rosterShirt": 21
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "_id": "pss-igor-bohn-serie-b-2026-espn",
+    "playerId": "avai-pro-igor-bohn",
+    "clubId": "club-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "provider": "espn_deportes",
+    "externalId": "256088",
+    "scope": "competition_season_total",
+    "asOf": "2026-11-07",
+    "minutes": null,
+    "stats": {
+      "appearances": 8,
+      "substituteAppearances": 1,
+      "saves": 33,
+      "goalsConceded": 9,
+      "assists": 0,
+      "foulsCommitted": 0,
+      "foulsSuffered": 3,
+      "yellowCards": 0,
+      "redCards": 0,
+      "startsDerived": 7
+    },
+    "units": {
+      "minutes": "minutos",
+      "appearances": "jogos",
+      "substituteAppearances": "jogos",
+      "startsDerived": "jogos",
+      "goals": "gols",
+      "assists": "assistências",
+      "shots": "finalizações",
+      "shotsOnTarget": "finalizações",
+      "saves": "defesas",
+      "goalsConceded": "gols",
+      "foulsCommitted": "faltas",
+      "foulsSuffered": "faltas",
+      "yellowCards": "cartões",
+      "redCards": "cartões"
+    },
+    "match": {
+      "method": "number_partial_name",
+      "espnName": "Igor José Bohn",
+      "espnShirt": 1,
+      "rosterShirt": 1
+    },
+    "needsReview": false,
+    "limitations": [
+      "Minutos jogados não são publicados pelo provedor (minutes = null).",
+      "appearances inclui entradas como reserva; startsDerived = appearances − substituteAppearances (derivado).",
+      "Agregado de página pública da ESPN, não é feed licenciado; conferir antes de decisões."
+    ],
+    "sourceRefs": [
+      {
+        "sourceId": "src-espn-avai-plantel-2026",
+        "url": "https://espndeportes.espn.com/futbol/equipo/plantel/_/id/9966/bra.ava",
+        "collectedAt": "2026-11-07"
+      }
+    ]
+  }
+]

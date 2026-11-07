@@ -10,8 +10,8 @@
  *
  * Variáveis: MONGODB_URI (obrigatória fora do dry-run), MONGODB_DB (padrão: scout_avai)
  */
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
 const { COLLECTIONS, MANAGED_FIELDS, VALIDATORS, INDEXES } = require('./schema');
 
 const args = new Set(process.argv.slice(2));
@@ -55,6 +55,7 @@ async function main() {
     ['players', 'clubId', 'clubs'], ['matches', 'competitionId', 'competitions'], ['matches', 'seasonId', 'seasons'],
     ['matches', 'homeClubId', 'clubs'], ['matches', 'awayClubId', 'clubs'], ['seasons', 'competitionId', 'competitions'],
     ['club_titles', 'clubId', 'clubs'], ['club_history', 'clubId', 'clubs'],
+    ['player_season_stats', 'playerId', 'players'], ['player_season_stats', 'competitionId', 'competitions'], ['player_season_stats', 'seasonId', 'seasons'],
   ];
   for (const [col, field, target] of refs) {
     const valid = ids(target);
