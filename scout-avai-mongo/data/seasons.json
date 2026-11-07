@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "season-serie-b-2026",
+    "competitionId": "comp-serie-b",
+    "year": 2026,
+    "startDate": null,
+    "endDate": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-cbf-serie-b-2026",
+        "collectedAt": null
+      }
+    ]
+  }
+]

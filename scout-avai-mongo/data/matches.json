@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "match-serie-b-2026-r36-nautico-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "round": 36,
+    "date": "2026-10-31",
+    "kickoffAt": null,
+    "homeClubId": "club-nautico",
+    "awayClubId": "club-avai",
+    "stadiumId": null,
+    "status": "finished",
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/futebol/profissional/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "match-serie-b-2026-r37-avai-sao-bernardo",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "round": 37,
+    "date": "2026-11-07",
+    "kickoffAt": "2026-11-07T16:00:00-03:00",
+    "homeClubId": "club-avai",
+    "awayClubId": "club-sao-bernardo",
+    "stadiumId": null,
+    "status": "scheduled",
+    "score": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/futebol/profissional/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "match-serie-b-2026-r38-america-mineiro-avai",
+    "competitionId": "comp-serie-b",
+    "seasonId": "season-serie-b-2026",
+    "round": 38,
+    "date": "2026-11-14",
+    "kickoffAt": "2026-11-14T16:30:00-03:00",
+    "homeClubId": "club-america-mineiro",
+    "awayClubId": "club-avai",
+    "stadiumId": null,
+    "status": "scheduled",
+    "score": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/futebol/profissional/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

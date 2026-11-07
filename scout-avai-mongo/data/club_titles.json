@@ -1,0 +1,231 @@
+[
+  {
+    "_id": "title-avai-catarinense",
+    "clubId": "club-avai",
+    "competitionName": "Campeonato Catarinense",
+    "competitionId": "comp-catarinense",
+    "kind": "campeao",
+    "years": [
+      1924,
+      1926,
+      1927,
+      1928,
+      1930,
+      1942,
+      1943,
+      1944,
+      1945,
+      1973,
+      1975,
+      1988,
+      1997,
+      2009,
+      2010,
+      2012,
+      2019,
+      2021,
+      2025
+    ],
+    "count": 19,
+    "declaredCount": 19,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-recopa-catarinense",
+    "clubId": "club-avai",
+    "competitionName": "Recopa Catarinense",
+    "competitionId": "comp-recopa-catarinense",
+    "kind": "campeao",
+    "years": [
+      2026
+    ],
+    "count": 1,
+    "declaredCount": 1,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-serie-c",
+    "clubId": "club-avai",
+    "competitionName": "Campeonato Brasileiro Série C",
+    "competitionId": "comp-serie-c",
+    "kind": "campeao",
+    "years": [
+      1998
+    ],
+    "count": 1,
+    "declaredCount": 1,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-serie-b-vice",
+    "clubId": "club-avai",
+    "competitionName": "Campeonato Brasileiro Série B",
+    "competitionId": "comp-serie-b",
+    "kind": "vice",
+    "years": [
+      2016
+    ],
+    "count": 1,
+    "declaredCount": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-catarinense-2a-divisao",
+    "clubId": "club-avai",
+    "competitionName": "Campeonato Catarinense da 2ª Divisão",
+    "competitionId": null,
+    "kind": "campeao",
+    "years": [
+      1994
+    ],
+    "count": 1,
+    "declaredCount": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-taca-governador",
+    "clubId": "club-avai",
+    "competitionName": "Taça Governador do Estado de Santa Catarina",
+    "competitionId": null,
+    "kind": "campeao",
+    "years": [
+      1983,
+      1985
+    ],
+    "count": 2,
+    "declaredCount": 2,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-copa-santa-catarina",
+    "clubId": "club-avai",
+    "competitionName": "Copa Santa Catarina",
+    "competitionId": "comp-copa-santa-catarina",
+    "kind": "campeao",
+    "years": [
+      1995
+    ],
+    "count": 1,
+    "declaredCount": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-torneio-inicio",
+    "clubId": "club-avai",
+    "competitionName": "Torneio Início",
+    "competitionId": null,
+    "kind": "campeao",
+    "years": [
+      1925,
+      1926,
+      1933,
+      1936,
+      1938,
+      1942,
+      1943,
+      1944,
+      1946,
+      1955,
+      1960,
+      1963
+    ],
+    "count": 12,
+    "declaredCount": 12,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "title-avai-citadino",
+    "clubId": "club-avai",
+    "competitionName": "Campeonatos Regionais da Cidade de Florianópolis (Citadino)",
+    "competitionId": null,
+    "kind": "campeao",
+    "years": [
+      1924,
+      1926,
+      1927,
+      1928,
+      1930,
+      1933,
+      1938,
+      1940,
+      1942,
+      1943,
+      1944,
+      1945,
+      1949,
+      1951,
+      1952,
+      1953,
+      1958,
+      1960,
+      1963,
+      1995
+    ],
+    "count": 20,
+    "declaredCount": 20,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "stadium-ressacada",
+    "type": "stadium",
+    "name": "Estádio Dr. Aderbal Ramos da Silva",
+    "popularName": "Ressacada",
+    "city": "Florianópolis",
+    "region": "Sul da Ilha",
+    "state": "SC",
+    "country": "BR",
+    "ownerClubId": "club-avai",
+    "capacity": 17800,
+    "inauguratedAt": "1983-11-15",
+    "status": "ativo",
+    "attendanceRecord": {
+      "attendance": 25735,
+      "date": "1988-07-17",
+      "match": "Avaí 2x1 Blumenau (final do Campeonato Catarinense, jogo de volta)"
+    },
+    "notes": "Gramado e sistema de irrigação trocados em dezembro de 2023. Gramado descrito pelo clube como \"grama especial\"; tipo exato não informado.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "stadium-cfa-joao-nilson-zunino",
+    "type": "training_center",
+    "name": "Centro de Formação de Atletas (CFA) João Nilson Zunino",
+    "city": "Florianópolis",
+    "state": "SC",
+    "country": "BR",
+    "ownerClubId": "club-avai",
+    "annexTo": "stadium-ressacada",
+    "fields": 3,
+    "syntheticFields": 1,
+    "status": "ativo",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "stadium-adolfo-konder",
+    "type": "stadium",
+    "name": "Estádio Adolfo Konder",
+    "popularName": "Campo da Liga",
+    "city": "Florianópolis",
+    "state": "SC",
+    "country": "BR",
+    "ownerClubId": null,
+    "inauguratedYear": 1930,
+    "closedAt": "1983-11",
+    "status": "desativado",
+    "areaM2": 15000,
+    "notes": "Primeiro estádio do Avaí, no centro de Florianópolis (hoje Beiramar Shopping). Sem iluminação.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

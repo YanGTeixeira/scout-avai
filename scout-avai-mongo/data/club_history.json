@@ -1,0 +1,178 @@
+[
+  {
+    "_id": "hist-1923-fundacao",
+    "clubId": "club-avai",
+    "date": "1923",
+    "datePrecision": "year",
+    "title": "Fundação do Avaí",
+    "description": "Amadeu Horn presenteia garotos da Rua Frei Caneca (Pedra Grande, hoje Agronômica) com uniformes azul e branco. Nome \"Avahy\" inspirado na Batalha do Avahy; cores em homenagem ao Clube de Remo Riachuelo.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1930-adolfo-konder",
+    "clubId": "club-avai",
+    "date": "1930",
+    "datePrecision": "year",
+    "title": "Inauguração do Estádio Adolfo Konder",
+    "description": "Primeiro estádio do Avaí (\"Campo da Liga\"), no centro de Florianópolis.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1945-21x3-paula-ramos",
+    "clubId": "club-avai",
+    "date": "1945",
+    "datePrecision": "year",
+    "title": "Avaí 21 x 3 Paula Ramos",
+    "description": "Segundo o clube, partida com o maior número de gols da história do futebol brasileiro.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1972-08-15-avai-santos",
+    "clubId": "club-avai",
+    "date": "1972-08-15",
+    "datePrecision": "day",
+    "title": "Avaí 1 x 2 Santos",
+    "description": "Jogo no Adolfo Konder com Pelé presente.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1980-troca-terreno",
+    "clubId": "club-avai",
+    "date": "1980",
+    "datePrecision": "year",
+    "title": "Troca de terreno para a futura Ressacada",
+    "description": "Terreno de 15.000 m² do Adolfo Konder trocado por área de 120.000 m² no sul da Ilha.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1983-11-15-ressacada",
+    "clubId": "club-avai",
+    "date": "1983-11-15",
+    "datePrecision": "day",
+    "title": "Inauguração da Ressacada",
+    "description": "Avaí 1 x 6 Vasco da Gama. Primeiro gol do estádio: Vílson Tadei (Vasco); primeiro do Avaí: Amarildo. Técnico do Avaí: Ladinho.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1988-07-17-recorde-publico",
+    "clubId": "club-avai",
+    "date": "1988-07-17",
+    "datePrecision": "day",
+    "title": "Recorde de público na Ressacada",
+    "description": "25.735 pagantes em Avaí 2 x 1 Blumenau, final do Catarinense.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1998-serie-c",
+    "clubId": "club-avai",
+    "date": "1998",
+    "datePrecision": "year",
+    "title": "Campeão brasileiro da Série C",
+    "description": "Título que marcou o retorno do clube ao cenário nacional.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-1998-selecao-todos-os-tempos",
+    "clubId": "club-avai",
+    "date": "1998",
+    "datePrecision": "year",
+    "title": "Seleção de todos os tempos do Avaí",
+    "description": "Pesquisa com torcedores, jornalistas e ex-atletas. Goleiro: Adolfinho. Defesa: Loló, Fateco, Veneza, Procópio. Meio-campo: Zenon, Beck, Braulio, Felipinho. Ataque: Saul, Nizeta.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-2016-vice-serie-b",
+    "clubId": "club-avai",
+    "date": "2016",
+    "datePrecision": "year",
+    "title": "Vice-campeão brasileiro da Série B",
+    "description": null,
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "hist-2023-12-reforma-gramado",
+    "clubId": "club-avai",
+    "date": "2023-12",
+    "datePrecision": "month",
+    "title": "Reforma do gramado da Ressacada",
+    "description": "Grama trocada e novo sistema de irrigação/drenagem instalado.",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-ressacada",
+        "url": "https://avai.com.br/clube/ressacada/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

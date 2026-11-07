@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "src-avai-elenco",
+    "name": "Avaí F.C. — Profissional (elenco e calendário)",
+    "type": "official_club",
+    "url": "https://avai.com.br/futebol/profissional/",
+    "publisher": "Avaí Futebol Clube",
+    "reliability": "high",
+    "scope": "Nome, número da camisa e categoria de posição do elenco listado; calendário/resultados recentes. Não traz idade, contrato nem estatísticas.",
+    "usedInLoad": true,
+    "collectedAt": "2026-11-07"
+  },
+  {
+    "_id": "src-avai-historia",
+    "name": "Avaí F.C. — História e títulos",
+    "type": "official_club",
+    "url": "https://avai.com.br/clube/historia/",
+    "publisher": "Avaí Futebol Clube",
+    "reliability": "high",
+    "scope": "História institucional, títulos e ídolos conforme divulgado pelo próprio clube. Torcida/sócios citam fontes de terceiros (Atlas Intel/Estadão 2024; Pluri Consultoria).",
+    "usedInLoad": true,
+    "collectedAt": "2026-11-07"
+  },
+  {
+    "_id": "src-avai-ressacada",
+    "name": "Avaí F.C. — Ressacada",
+    "type": "official_club",
+    "url": "https://avai.com.br/clube/ressacada/",
+    "publisher": "Avaí Futebol Clube",
+    "reliability": "high",
+    "scope": "Dados do estádio, CFA e história da Ressacada/Adolfo Konder.",
+    "usedInLoad": true,
+    "collectedAt": "2026-11-07"
+  },
+  {
+    "_id": "src-cbf-serie-b-2026",
+    "name": "CBF — Série B 2026, atletas",
+    "type": "federation",
+    "url": "https://www.cbf.com.br/futebol-brasileiro/times/campeonato-brasileiro/serie-b/2026/20058?tab=atletas",
+    "publisher": "Confederação Brasileira de Futebol",
+    "reliability": "high",
+    "scope": "Registros de atletas da Série B 2026. Pode listar atletas que já deixaram o clube; não usada para declarar elenco atual.",
+    "usedInLoad": false,
+    "collectedAt": null
+  }
+]

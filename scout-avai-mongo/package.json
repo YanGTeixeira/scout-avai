@@ -1,0 +1,17 @@
+{
+  "name": "scout-avai-mongo",
+  "version": "1.0.0",
+  "description": "Carga inicial do MongoDB para o sistema Scout Avaí",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "seed": "node seed.js",
+    "seed:dry": "node seed.js --dry-run",
+    "seed:force": "node seed.js --force"
+  },
+  "dependencies": {
+    "mongodb": "^4.17.2"
+  }
+}

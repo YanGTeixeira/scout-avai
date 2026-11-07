@@ -1,0 +1,1542 @@
+[
+  {
+    "_id": "avai-pro-kaua-santos",
+    "clubId": "club-avai",
+    "name": "Kauã Santos",
+    "slug": "kaua-santos",
+    "category": "profissional",
+    "shirtNumber": 30,
+    "positionLabel": "Meio-campo",
+    "positionGroup": "MF",
+    "positions": [
+      {
+        "label": "Meio-campo",
+        "group": "MF",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "kaua-santos"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/kaua-santos/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-filipinho",
+    "clubId": "club-avai",
+    "name": "Filipinho",
+    "slug": "filipinho",
+    "category": "profissional",
+    "shirtNumber": 59,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "filipinho"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/filipinho/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-rildo",
+    "clubId": "club-avai",
+    "name": "Rildo",
+    "slug": "rildo",
+    "category": "profissional",
+    "shirtNumber": 37,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "rildo"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/rildo/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-vinicius-immig",
+    "clubId": "club-avai",
+    "name": "Vinícius Immig",
+    "slug": "vinicius-immig",
+    "category": "profissional",
+    "shirtNumber": 26,
+    "positionLabel": "Meio-campo",
+    "positionGroup": "MF",
+    "positions": [
+      {
+        "label": "Meio-campo",
+        "group": "MF",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "vinicius-immig"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/vinicius-immig/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-caio-suasuna",
+    "clubId": "club-avai",
+    "name": "Caio Suassuna",
+    "slug": "caio-suasuna",
+    "category": "profissional",
+    "shirtNumber": 16,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "caio-suasuna"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/caio-suasuna/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-gabriel-cipriano",
+    "clubId": "club-avai",
+    "name": "Gabriel Cipriano",
+    "slug": "gabriel-cipriano",
+    "category": "profissional",
+    "shirtNumber": 23,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "gabriel-cipriano"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/gabriel-cipriano/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-leo-chu",
+    "clubId": "club-avai",
+    "name": "Léo Chú",
+    "slug": "leo-chu",
+    "category": "profissional",
+    "shirtNumber": 7,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "leo-chu"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/leo-chu/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-juan-rocha",
+    "clubId": "club-avai",
+    "name": "Juan Rocha",
+    "slug": "juan-rocha",
+    "category": "profissional",
+    "shirtNumber": 17,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "juan-rocha"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/juan-rocha/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-leo-gamalho",
+    "clubId": "club-avai",
+    "name": "Léo Gamalho",
+    "slug": "leo-gamalho",
+    "category": "profissional",
+    "shirtNumber": 9,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "leo-gamalho"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/leo-gamalho/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-william",
+    "clubId": "club-avai",
+    "name": "William",
+    "slug": "william",
+    "category": "profissional",
+    "shirtNumber": 56,
+    "positionLabel": "Lateral",
+    "positionGroup": "FB",
+    "positions": [
+      {
+        "label": "Lateral",
+        "group": "FB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "william"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/william/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-joao-vitor-3",
+    "clubId": "club-avai",
+    "name": "João Vitor",
+    "slug": "joao-vitor-3",
+    "category": "profissional",
+    "shirtNumber": 22,
+    "positionLabel": "Lateral",
+    "positionGroup": "FB",
+    "positions": [
+      {
+        "label": "Lateral",
+        "group": "FB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "joao-vitor-3"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/joao-vitor-3/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-pedrao-2",
+    "clubId": "club-avai",
+    "name": "Pedrão",
+    "slug": "pedrao-2",
+    "category": "profissional",
+    "shirtNumber": 35,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "pedrao-2"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/pedrao-2/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-reynaldo",
+    "clubId": "club-avai",
+    "name": "Reynaldo",
+    "slug": "reynaldo",
+    "category": "profissional",
+    "shirtNumber": 40,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "reynaldo"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/reynaldo/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-bruno-ferreira",
+    "clubId": "club-avai",
+    "name": "Bruno Ferreira",
+    "slug": "bruno-ferreira",
+    "category": "profissional",
+    "shirtNumber": 94,
+    "positionLabel": "Goleiro",
+    "positionGroup": "GK",
+    "positions": [
+      {
+        "label": "Goleiro",
+        "group": "GK",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "bruno-ferreira"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/bruno-ferreira/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-isaias",
+    "clubId": "club-avai",
+    "name": "Isaias",
+    "slug": "isaias",
+    "category": "profissional",
+    "shirtNumber": 20,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "isaias"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/isaias/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-wenderson",
+    "clubId": "club-avai",
+    "name": "Wenderson",
+    "slug": "wenderson",
+    "category": "profissional",
+    "shirtNumber": 95,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "wenderson"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/wenderson/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-jefferson-maciel",
+    "clubId": "club-avai",
+    "name": "Jefferson Maciel",
+    "slug": "jefferson-maciel",
+    "category": "profissional",
+    "shirtNumber": 38,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "jefferson-maciel"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/jefferson-maciel/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-paulo-vitor",
+    "clubId": "club-avai",
+    "name": "Paulo Vitor",
+    "slug": "paulo-vitor",
+    "category": "profissional",
+    "shirtNumber": 25,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "paulo-vitor"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/paulo-vitor/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-luiz-henrique",
+    "clubId": "club-avai",
+    "name": "Luiz Henrique",
+    "slug": "luiz-henrique",
+    "category": "profissional",
+    "shirtNumber": 8,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "luiz-henrique"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/luiz-henrique/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-guilherme-aquino",
+    "clubId": "club-avai",
+    "name": "Guilherme Aquino",
+    "slug": "guilherme-aquino",
+    "category": "profissional",
+    "shirtNumber": 15,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "guilherme-aquino"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/guilherme-aquino/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-hyan",
+    "clubId": "club-avai",
+    "name": "Hyan",
+    "slug": "hyan",
+    "category": "profissional",
+    "shirtNumber": 18,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "hyan"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/hyan/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-kevin-2",
+    "clubId": "club-avai",
+    "name": "Kevin",
+    "slug": "kevin-2",
+    "category": "profissional",
+    "shirtNumber": 90,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "kevin-2"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/kevin-2/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-pedro-cuiaba",
+    "clubId": "club-avai",
+    "name": "Pedro Cuiabá",
+    "slug": "pedro-cuiaba",
+    "category": "profissional",
+    "shirtNumber": 27,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "pedro-cuiaba"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/pedro-cuiaba/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-daniel-penha",
+    "clubId": "club-avai",
+    "name": "Daniel Penha",
+    "slug": "daniel-penha",
+    "category": "profissional",
+    "shirtNumber": 14,
+    "positionLabel": "Meio-campo",
+    "positionGroup": "MF",
+    "positions": [
+      {
+        "label": "Meio-campo",
+        "group": "MF",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "daniel-penha"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/daniel-penha/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-gabriel-simples",
+    "clubId": "club-avai",
+    "name": "Gabriel Simples",
+    "slug": "gabriel-simples",
+    "category": "profissional",
+    "shirtNumber": 4,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "gabriel-simples"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/gabriel-simples/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-allison",
+    "clubId": "club-avai",
+    "name": "Allyson",
+    "slug": "allison",
+    "category": "profissional",
+    "shirtNumber": 3,
+    "positionLabel": "Zagueiro",
+    "positionGroup": "CB",
+    "positions": [
+      {
+        "label": "Zagueiro",
+        "group": "CB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "allison"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/allison/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-wallison",
+    "clubId": "club-avai",
+    "name": "Wallison",
+    "slug": "wallison",
+    "category": "profissional",
+    "shirtNumber": 2,
+    "positionLabel": "Lateral",
+    "positionGroup": "FB",
+    "positions": [
+      {
+        "label": "Lateral",
+        "group": "FB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "wallison"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/wallison/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-del-piage",
+    "clubId": "club-avai",
+    "name": "Del Piage",
+    "slug": "del-piage",
+    "category": "profissional",
+    "shirtNumber": 5,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "del-piage"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/del-piage/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-dg",
+    "clubId": "club-avai",
+    "name": "Douglas Teixeira",
+    "slug": "dg",
+    "category": "profissional",
+    "shirtNumber": 36,
+    "positionLabel": "Lateral",
+    "positionGroup": "FB",
+    "positions": [
+      {
+        "label": "Lateral",
+        "group": "FB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "dg"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/dg/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-quaresma",
+    "clubId": "club-avai",
+    "name": "Quaresma",
+    "slug": "quaresma",
+    "category": "profissional",
+    "shirtNumber": 66,
+    "positionLabel": "Lateral",
+    "positionGroup": "FB",
+    "positions": [
+      {
+        "label": "Lateral",
+        "group": "FB",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "quaresma"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/quaresma/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-ze-ricardo",
+    "clubId": "club-avai",
+    "name": "Zé Ricardo",
+    "slug": "ze-ricardo",
+    "category": "profissional",
+    "shirtNumber": 77,
+    "positionLabel": "Volante",
+    "positionGroup": "DM",
+    "positions": [
+      {
+        "label": "Volante",
+        "group": "DM",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "ze-ricardo"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/ze-ricardo/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-jean-lucas",
+    "clubId": "club-avai",
+    "name": "Jean Lucas",
+    "slug": "jean-lucas",
+    "category": "profissional",
+    "shirtNumber": 10,
+    "positionLabel": "Meio-campo",
+    "positionGroup": "MF",
+    "positions": [
+      {
+        "label": "Meio-campo",
+        "group": "MF",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "jean-lucas"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/jean-lucas/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-gaspar",
+    "clubId": "club-avai",
+    "name": "Gaspar",
+    "slug": "gaspar",
+    "category": "profissional",
+    "shirtNumber": 68,
+    "positionLabel": "Atacante",
+    "positionGroup": "FW",
+    "positions": [
+      {
+        "label": "Atacante",
+        "group": "FW",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "gaspar"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/gaspar/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-otavio",
+    "clubId": "club-avai",
+    "name": "Otávio",
+    "slug": "otavio",
+    "category": "profissional",
+    "shirtNumber": 21,
+    "positionLabel": "Goleiro",
+    "positionGroup": "GK",
+    "positions": [
+      {
+        "label": "Goleiro",
+        "group": "GK",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "otavio"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/otavio/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "avai-pro-igor-bohn",
+    "clubId": "club-avai",
+    "name": "Igor Bohn",
+    "slug": "igor-bohn",
+    "category": "profissional",
+    "shirtNumber": 1,
+    "positionLabel": "Goleiro",
+    "positionGroup": "GK",
+    "positions": [
+      {
+        "label": "Goleiro",
+        "group": "GK",
+        "isPrimary": true,
+        "sourceId": "src-avai-elenco"
+      }
+    ],
+    "squadStatus": "listed_on_official_page",
+    "externalIds": {
+      "avaiSite": "igor-bohn"
+    },
+    "fullName": null,
+    "birthDate": null,
+    "nationality": null,
+    "heightCm": null,
+    "weightKg": null,
+    "preferredFoot": null,
+    "contract": null,
+    "statistics": [],
+    "dataCompleteness": {
+      "identity": "partial",
+      "physical": "missing",
+      "contract": "missing",
+      "statistics": "missing"
+    },
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "url": "https://avai.com.br/elenco-profissional/igor-bohn/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

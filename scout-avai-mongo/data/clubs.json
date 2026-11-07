@@ -1,0 +1,84 @@
+[
+  {
+    "_id": "club-avai",
+    "name": "Avaí Futebol Clube",
+    "shortName": "Avaí",
+    "nicknames": [
+      "Leão da Ilha",
+      "Time da Raça"
+    ],
+    "foundedYear": 1923,
+    "city": "Florianópolis",
+    "state": "SC",
+    "country": "BR",
+    "colors": [
+      "azul",
+      "branco"
+    ],
+    "homeStadiumId": "stadium-ressacada",
+    "trainingCenterId": "stadium-cfa-joao-nilson-zunino",
+    "fanbase": {
+      "estimatedSupporters": 496000,
+      "year": 2024,
+      "origin": "Atlas Intel em parceria com o Estadão (citado pelo clube)"
+    },
+    "membersCount": {
+      "value": 10520,
+      "collectedAt": "2026-11-07"
+    },
+    "website": "https://avai.com.br",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-historia",
+        "url": "https://avai.com.br/clube/historia/",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "club-nautico",
+    "name": "Náutico",
+    "shortName": "Náutico",
+    "city": null,
+    "state": "PE",
+    "country": "BR",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "club-sao-bernardo",
+    "name": "São Bernardo",
+    "shortName": "São Bernardo",
+    "city": null,
+    "state": "SP",
+    "country": "BR",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  },
+  {
+    "_id": "club-america-mineiro",
+    "name": "América Mineiro",
+    "shortName": "América Mineiro",
+    "city": null,
+    "state": null,
+    "country": "BR",
+    "sourceRefs": [
+      {
+        "sourceId": "src-avai-elenco",
+        "collectedAt": "2026-11-07"
+      }
+    ],
+    "lastVerifiedAt": "2026-11-07"
+  }
+]

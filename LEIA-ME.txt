@@ -1,0 +1,35 @@
+# Scout Avaí — MVP 0.1
+
+## O que está incluído
+- Dashboard responsivo com navegação por módulos.
+- Cadastro, edição, exclusão, busca e filtros de jogadores.
+- Suporte a elenco profissional, categorias de base e registros históricos.
+- Importação de jogadores por CSV e exportação de backup JSON.
+- Cadastro manual de alvos do mercado.
+- Comparador descritivo de dois atletas.
+- Registro do modelo de jogo e requisitos por função.
+- Linha do tempo histórica com campo de fonte.
+- Relatórios de scout e pareceres.
+
+## Como abrir
+1. Extraia o arquivo ZIP.
+2. Abra `scout-avai.html` em um navegador atualizado.
+3. Os dados ficam salvos no armazenamento local daquele navegador/dispositivo.
+4. Faça backups regulares pelo botão **Exportar dados**.
+
+## Importação CSV
+Use `modelo-importacao-jogadores.csv` como modelo. Campos mínimos recomendados:
+`name, club, category, position, birth, season, status`
+Categorias sugeridas: `Profissional`, `Sub-20`, `Sub-17`, `Sub-15`, `Histórico`.
+Posições sugeridas: `Goleiro`, `Zagueiro`, `Lateral`, `Volante`, `Meia`, `Ponta`, `Centroavante`.
+
+## Limitações desta versão
+- Não há banco de dados na nuvem, login ou sincronização entre dispositivos.
+- Não há coleta automática de estatísticas, contratos, notícias ou vídeos.
+- Comparações são descritivas; ainda não existe modelo estatístico de desempenho ajustado por posição/competição.
+- O sistema não gera recomendações automáticas de contratação.
+- Registros históricos precisam ser inseridos e documentados com fontes.
+- Dados guardados no navegador podem ser perdidos se os dados locais forem apagados. Exporte backups.
+
+## Próxima evolução técnica
+Migrar persistência para PostgreSQL/Supabase, adicionar autenticação e trilha de auditoria; criar pipeline de ingestão com fontes autorizadas; normalizar estatísticas por 90 minutos, competição, posição e função; implementar motor de score explicável e relatórios com evidências.
