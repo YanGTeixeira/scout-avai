@@ -63,3 +63,16 @@ Só links `https://widgets.sofascore.com/...` são aceitos. O servidor guarda ap
 Os números do widget pertencem ao SofaScore: não são gravados na base nem usados nas análises.
 
 Testes: `npm test`.
+
+## Atualização do elenco pelo site oficial do Avaí
+```bash
+npm run sync:avai               # coleta e grava
+npm run sync:avai -- --dry-run  # mostra o que mudaria, sem gravar
+npm run sync:avai -- --force    # reprocessa mesmo se o site não mudou
+```
+- Fonte: API WordPress pública do site do clube (`avai.com.br/wp-json/wp/v2/elenco-profissional`), que traz número, posição, nome completo, nascimento, naturalidade, altura e peso. O `robots.txt` do site libera a coleta. São 2 requisições por execução, e uma vez por dia basta (ex.: cron `17 6 * * *`).
+- Cada campo guarda a origem em `fieldSources`. O site só sobrescreve campo vazio ou campo que ele mesmo gravou. Se outra origem já preencheu o campo com valor diferente, o valor atual é mantido e a divergência vai para `field_conflicts`.
+- Atleta que sai da página não é apagado: vira `squadStatus: not_listed_on_official_page` e some da lista do elenco atual.
+- Resposta idêntica à anterior não é reprocessada (hash em `raw_payloads`). Cada execução fica em `sync_runs`, com a lista de alterações.
+- Depois da coleta, o vínculo de cada atleta com a ESPN é cruzado com o nome completo e a camisa oficiais (`crossCheck` em `player_season_stats`). O que diverge fica marcado como "conferir fonte" na interface.
+- O `seed.js` agora só **insere** atletas novos e não sobrescreve os existentes (use `--force` para o comportamento antigo).

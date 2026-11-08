@@ -92,6 +92,12 @@ function elenco() {
     el('div', { class: 'sheet' }, el('table', {}, el('thead', {}, head), body)));
 }
 
+// Idade em anos completos na data de hoje.
+const age = (iso) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || '')) return null;
+  const [y, m, d] = iso.split('-').map(Number), t = new Date();
+  return t.getFullYear() - y - (t.getMonth() + 1 < m || (t.getMonth() + 1 === m && t.getDate() < d) ? 1 : 0);
+};
 const drawer = $('#drawer'), scrim = $('#scrim');
 let lastFocus = null;
 const list = (pairs) => el('dl', {}, ...pairs.flatMap(([k, v]) => [el('dt', {}, k), el('dd', { class: empty(v) ? 'dim' : null }, empty(v) ? 'Não informado' : String(v))]));
@@ -116,7 +122,10 @@ function openDrawer(p) {
     el('p', { class: 'sub' }, (p.shirt != null ? `Camisa ${p.shirt}, ` : '') + (p.position || 'posição não informada')),
     p.review ? el('p', { class: 'flag' }, 'O vínculo deste atleta com a fonte de estatísticas precisa ser conferido: nome ou camisa na fonte diferem dos do clube.') : null,
     el('h3', {}, 'Cadastro'),
-    list([['Clube', p.club], ['Nascimento', p.birth], ['Altura', p.height ? p.height + ' cm' : ''], ['Pé dominante', p.foot === 'Não informado' ? '' : p.foot], ['Status', p.status]]),
+    list([['Nome completo', p.fullName], ['Clube', p.club], ['Nascimento', p.birth ? `${fmtDate(p.birth)}${age(p.birth) != null ? ` (${age(p.birth)} anos)` : ''}` : ''], ['Naturalidade', p.birthPlace],
+      ['Altura', p.height ? p.height + ' cm' : ''], ['Peso', p.weight !== '' && p.weight != null ? fmtN(Number(p.weight), Number(p.weight) % 1 ? 1 : 0) + ' kg' : ''],
+      ['Pé dominante', p.foot === 'Não informado' ? '' : p.foot], ['Status', p.status]]),
+    p.profileSource ? el('p', { class: 'meta' }, `Cadastro: site oficial do Avaí, conferido em ${fmtDate(p.profileSource.lastVerifiedAt || p.profileSource.collectedAt)}.`) : null,
     el('h3', {}, 'Série B 2026'), ...stats, ...rates(p),
     widgetSection(state, 'player', p.id),
     el('p', {}, el('button', { class: 'btn', onclick: () => { ui.cmp.a = p.id; closeDrawer(); location.hash = '#/comparador'; } }, 'Comparar com outro atleta')));
@@ -166,7 +175,7 @@ async function boot() {
   try {
     const s = await loadState();
     state = s;
-    all = s.players.filter((p) => p.category === 'Profissional').map(toRow);
+    all = s.players.filter((p) => p.category === 'Profissional' && p.listed !== false).map(toRow);
     if (!all.length) return fail('Nenhum atleta no banco. Rode node seed.js para carregar o elenco inicial.');
     route();
   } catch (e) {

@@ -23,6 +23,12 @@ const nz = v => (v === '' || v === undefined) ? null : v;
 const GROUP = { Goleiro: 'GK', Zagueiro: 'CB', Lateral: 'FB', Volante: 'DM', Meia: 'MF', 'Meio-campo': 'MF', Ponta: 'FW', Centroavante: 'FW', Atacante: 'FW' };
 const CAT = { profissional: 'Profissional', 'sub-20': 'Sub-20', 'sub-17': 'Sub-17', 'sub-15': 'Sub-15', historico: 'Histórico' };
 
+// Origem do cadastro (nome completo, nascimento, físico) quando veio do coletor do site do clube.
+const profileSource = d => {
+  const f = d.fieldSources && (d.fieldSources.birthDate || d.fieldSources.fullName);
+  return f ? { sourceId: f.sourceId, collectedAt: String(f.collectedAt || '').slice(0, 10), lastVerifiedAt: d.lastVerifiedAt || null } : null;
+};
+
 // Cada entrada: coleção, ordenação, banco→interface (toUI) e interface→banco (fromUI).
 // fromUI devolve { set, soi }: set é sempre atualizado; soi ($setOnInsert) só na criação.
 const MAPS = {
@@ -34,7 +40,9 @@ const MAPS = {
       return { id: d._id, name: d.name || '', birth: d.birthDate || '', club: ctx.clubs[d.clubId] || '', category: CAT[d.category] || d.category || '',
         position: d.positionLabel || '', foot: d.preferredFoot || 'Não informado', season: ms('season'), status: d.uiStatus || 'Elenco',
         height: d.heightCm == null ? '' : d.heightCm, minutes: ms('minutes'), goals: ms('goals'), assists: ms('assists'), notes: d.notes || '',
-        shirt: d.shirtNumber == null ? '' : d.shirtNumber, group: d.positionGroup || '', official: st.full || null, asOf: st.asOf || '', review: !!st.review };
+        shirt: d.shirtNumber == null ? '' : d.shirtNumber, group: d.positionGroup || '', official: st.full || null, asOf: st.asOf || '', review: !!st.review,
+        fullName: d.fullName || '', birthPlace: d.birthPlace && d.birthPlace.raw ? d.birthPlace.raw : '', weight: d.weightKg == null ? '' : d.weightKg,
+        listed: d.squadStatus !== 'not_listed_on_official_page', profileSource: profileSource(d) };
     },
     fromUI: async (p, id, ctx) => {
       const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1 } });
