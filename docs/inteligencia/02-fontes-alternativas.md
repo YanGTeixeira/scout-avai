@@ -104,3 +104,19 @@ Valores de mercado e salários **continuam sem fonte autorizada**. Ficam como re
 - Stats Perform — Palmeiras: https://www.statsperform.com/?p=28552
 - CBF Fair Play Financeiro e BID: https://www.mktesportivo.com/2025/11/cbf-implementa-fair-play-financeiro-com-monitoramento-triplo-anual-e-punicoes-graduais/
 - ClubElo via soccerdata: https://soccerdata.readthedocs.io/en/latest/datasources/ClubElo.html
+
+## Avaliação de sites públicos (2026-11-08)
+
+Verificação de `robots.txt`, termos de uso e acesso técnico, feita com identificação honesta (`scout-avai-research`) e sem driblar proteções.
+
+| Site | O que publica | Regras encontradas | Conclusão |
+|---|---|---|---|
+| **CBF** (`www.cbf.com.br`) | Atletas inscritos por clube e competição, no HTML (nome completo, apelido, clube atual). Abas de histórico de partidas e estatísticas | Sem `robots.txt` (404). **Termos de uso (v1.0, 2022) proíbem** "copiar, reproduzir e alterar, total ou parcialmente, qualquer dado, informação, conteúdo" do site e qualquer utilização "comercial ou não comercial, não especificamente autorizada" | **Coleta automatizada não permitida** sem autorização da CBF |
+| CBF conteúdo e BID (`conteudo.cbf.com.br`, `bid.cbf.com.br`) | Escudos, documentos, súmulas, BID | Conexão recusada a partir deste servidor | Não avaliado |
+| **ESPN Brasil** (`www.espn.com.br`) | Estatísticas por atleta | `robots.txt` **bloqueia `anthropic-ai` em todo o site** e, para qualquer robô, páginas de estatística de jogador, escalações e estatísticas de partida | Não coletar |
+| ESPN Deportes (`espndeportes.espn.com`) | Plantel com estatísticas | `robots.txt` bloqueia estatísticas individuais (`*/jugador/estadisticas`), mas não a página de plantel. Termos são os da Disney (`disneytermsofuse.com`), não lidos | Pendente da leitura dos termos da Disney |
+| **FCF** (`www.fcf.com.br`) | Catarinense | `robots.txt` **bloqueia `ClaudeBot` e `anthropic-ai`**. Para os demais: `Content-Signal: ai-train=no, use=reference` | Não coletar com agente da Anthropic |
+| **ClubElo** | Rating Elo | Desafio Cloudflare ("Just a moment...") | Não coletar |
+| **Avaí** (`avai.com.br`) | Elenco, notícias, calendário | `robots.txt` libera tudo, com sitemap | Permitido. Por ser o próprio clube, é a fonte mais simples de autorizar |
+
+**Resultado:** entre os sites públicos avaliados, **nenhum terceiro permite coleta automatizada de forma clara**. O caminho legítimo para dados oficiais da CBF e da FCF é **pedir autorização ou acesso de dados como clube filiado**.
