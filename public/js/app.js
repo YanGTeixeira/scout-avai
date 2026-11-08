@@ -1,14 +1,22 @@
 import { loadState } from './api.js';
-import { $, el, empty, show, norm, fmtDate, fmtN } from './util.js';
+import { $, el, empty, show, norm, fmtDate, fmtN, age } from './util.js';
 import { GROUPS, ORDER, rateStats } from './metrics.js';
 import { painel } from './painel.js';
+import { perfil } from './perfil.js';
 import { comparador } from './comparador.js';
 import { clube } from './clube.js';
+import { mercado } from './mercado.js';
+import { relatorios } from './relatorios.js';
+import { modelo } from './modelo.js';
+import { atletas } from './atletas.js';
+import { fontes } from './fontes.js';
+import { widgetSection } from './widgets.js';
 
 const COLS = [
   { k: 'shirt', t: 'Nº', num: true, cls: 'no' },
   { k: 'name', t: 'Atleta' },
   { k: 'group', t: 'Posição' },
+  { k: 'age', t: 'Idade', num: true },
   { k: 'apps', t: 'Jogos', num: true },
   { k: 'starts', t: 'Titular', num: true },
   { k: 'goals', t: 'Gols', num: true },
@@ -28,7 +36,7 @@ const ui = { q: '', group: '', sort: { k: 'group', dir: 1 }, cmp: { a: '', b: ''
 
 const toRow = (p) => {
   const o = p.official || {};
-  return { ...p, shirt: empty(p.shirt) ? null : p.shirt, apps: o.appearances, starts: o.startsDerived, goals: o.goals, assists: o.assists, yellow: o.yellowCards, red: o.redCards };
+  return { ...p, shirt: empty(p.shirt) ? null : p.shirt, age: age(p.birth), apps: o.appearances, starts: o.startsDerived, goals: o.goals, assists: o.assists, yellow: o.yellowCards, red: o.redCards };
 };
 const sortVal = (p, k) => {
   if (k !== 'group') return p[k];
@@ -109,15 +117,20 @@ function openDrawer(p) {
   const stats = o
     ? [list(Object.keys(LABELS).filter((k) => o[k] != null).map((k) => [LABELS[k], o[k]])), el('p', { class: 'meta' }, `Fonte: ESPN Deportes, até ${fmtDate(p.asOf)}. Minutos jogados não são divulgados.`)]
     : [el('p', { class: 'dim' }, 'A fonte não traz estatísticas para este atleta.')];
+  const a = age(p.birth);
   drawer.replaceChildren(
     el('button', { class: 'btn close', onclick: closeDrawer }, 'Fechar'),
-    el('h2', { id: 'd-title' }, p.name),
-    el('p', { class: 'sub' }, (p.shirt != null ? `Camisa ${p.shirt}, ` : '') + (p.position || 'posição não informada')),
-    p.review ? el('p', { class: 'flag' }, 'O vínculo deste atleta com a fonte de estatísticas precisa ser conferido: nome ou camisa na fonte diferem dos do clube.') : null,
+    el('div', { class: 'kit' }, el('b', { 'aria-hidden': 'true' }, p.shirt != null ? String(p.shirt) : '–'),
+      el('div', {}, el('h2', { id: 'd-title' }, p.name), el('p', { class: 'sub' }, (p.shirt != null ? `Camisa ${p.shirt}, ` : '') + (p.position || 'posição não informada') + (a != null ? `, ${a} anos` : '')))),
+    p.review ? el('p', { class: 'flag', style: 'margin-top:16px' }, 'O vínculo deste atleta com a fonte de estatísticas precisa ser conferido: nome ou camisa na fonte diferem dos do clube.') : null,
     el('h3', {}, 'Cadastro'),
-    list([['Clube', p.club], ['Nascimento', p.birth], ['Altura', p.height ? p.height + ' cm' : ''], ['Pé dominante', p.foot === 'Não informado' ? '' : p.foot], ['Status', p.status]]),
+    list([['Nome completo', p.fullName], ['Clube', p.club], ['Nascimento', p.birth ? `${fmtDate(p.birth)}${a != null ? ` (${a} anos)` : ''}` : ''], ['Naturalidade', p.birthPlace],
+      ['Altura', p.height ? p.height + ' cm' : ''], ['Peso', p.weight !== '' && p.weight != null ? fmtN(Number(p.weight), Number(p.weight) % 1 ? 1 : 0) + ' kg' : ''],
+      ['Pé dominante', p.foot === 'Não informado' ? '' : p.foot], ['Status', p.status]]),
+    p.profileSource ? el('p', { class: 'meta' }, `Cadastro: site oficial do Avaí, conferido em ${fmtDate(p.profileSource.lastVerifiedAt || p.profileSource.collectedAt)}.`) : null,
     el('h3', {}, 'Série B 2026'), ...stats, ...rates(p),
-    el('p', {}, el('button', { class: 'btn', onclick: () => { ui.cmp.a = p.id; closeDrawer(); location.hash = '#/comparador'; } }, 'Comparar com outro atleta')));
+    widgetSection(state, 'player', p.id),
+    el('p', { style: 'margin-top:24px' }, el('button', { class: 'btn', onclick: () => { ui.cmp.a = p.id; closeDrawer(); location.hash = '#/comparador'; } }, 'Comparar com outro atleta')));
   drawer.classList.add('open'); scrim.classList.add('open');
   drawer.querySelector('.close').focus();
   document.addEventListener('keydown', onKey);
@@ -128,9 +141,10 @@ function closeDrawer() {
   if (lastFocus) lastFocus.focus();
 }
 function onKey(e) {
+  if (document.querySelector('dialog[open]')) return;
   if (e.key === 'Escape') return closeDrawer();
   if (e.key !== 'Tab') return;
-  const f = [...drawer.querySelectorAll('button,[href],input,select')];
+  const f = [...drawer.querySelectorAll('button,[href],input,select,textarea,summary,iframe')];
   if (!f.length) return;
   const first = f[0], last = f[f.length - 1];
   if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -138,34 +152,50 @@ function onKey(e) {
 }
 scrim.addEventListener('click', closeDrawer);
 
+// Contexto entregue a cada tela: dados, abrir ficha, recarregar após gravar e botões do cabeçalho.
+const ctx = () => ({ all, state, open: openDrawer, refresh, setActions: (...b) => $('#actions').replaceChildren(...b.filter(Boolean)) });
+const asOfLine = () => { const asOf = all.find((p) => p.asOf)?.asOf; return `${all.length} atletas no elenco profissional. Série B 2026${asOf ? ', estatísticas até ' + fmtDate(asOf) : ''}.`; };
 const routes = {
-  painel: ['Painel', () => painel(all, state, openDrawer)],
-  elenco: ['Elenco atual', elenco],
-  comparador: ['Comparador', () => comparador(all, ui.cmp)],
-  clube: ['Clube', () => clube(state)],
+  painel: ['Painel', asOfLine, (c) => painel(c)],
+  elenco: ['Elenco atual', asOfLine, elenco],
+  perfil: ['Perfil do elenco', () => 'Idade, utilização, origem e físico do elenco profissional.', (c) => perfil(c)],
+  comparador: ['Comparador', () => 'Dois atletas lado a lado, com os dados disponíveis na fonte.', () => comparador(all, ui.cmp)],
+  mercado: ['Alvos de mercado', () => 'Atletas de outros clubes em acompanhamento.', (c) => mercado(c)],
+  relatorios: ['Relatórios', () => 'Pareceres de contratação, renovação e acompanhamento.', (c) => relatorios(c)],
+  modelo: ['Modelo de jogo', () => 'Identidade de jogo e o que a comissão procura em cada função.', (c) => modelo(c)],
+  clube: ['História e títulos', () => 'Avaí Futebol Clube, fundado em 1923.', (c) => clube(c)],
+  atletas: ['Cadastro de atletas', () => 'Todos os atletas da base: profissional, categorias de base e históricos.', (c) => atletas(c)],
+  fontes: ['Fontes e backup', () => 'De onde vêm os dados e como guardar uma cópia.', (c) => fontes(c)],
 };
 function route() {
   const m = location.hash.match(/^#\/(\w+)/);
   const key = m && routes[m[1]] ? m[1] : 'painel';
-  const [title, view] = routes[key];
+  const [title, meta, view] = routes[key];
   $('#title').textContent = title;
   document.title = `${title} - Scout Avaí`;
   document.querySelectorAll('[data-route]').forEach((a) => (a.dataset.route === key ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
-  const asOf = all.find((p) => p.asOf)?.asOf;
-  $('#meta').textContent = `${all.length} atletas no elenco. Série B 2026${asOf ? ', estatísticas até ' + fmtDate(asOf) : ''}.`;
-  $('#main').replaceChildren(view());
+  $('#meta').textContent = meta();
+  $('#actions').replaceChildren();
+  $('#main').replaceChildren(view(ctx()));
 }
 function fail(msg) {
   $('#main').replaceChildren(el('div', { class: 'state' }, el('p', {}, msg), el('button', { class: 'btn', onclick: boot }, 'Tentar de novo')));
 }
+function apply(s) {
+  state = s;
+  all = s.players.filter((p) => p.category === 'Profissional' && p.listed !== false).map(toRow);
+}
+// Recarrega o estado do servidor depois de gravar e redesenha a tela atual.
+async function refresh() {
+  apply(await loadState());
+  route();
+}
 async function boot() {
-  $('#title').textContent = 'Elenco atual';
-  $('#main').replaceChildren(el('p', { class: 'state' }, 'Carregando elenco…'));
+  $('#title').textContent = 'Carregando';
+  $('#main').replaceChildren(el('p', { class: 'state' }, 'Carregando dados…'));
   try {
-    const s = await loadState();
-    state = s;
-    all = s.players.filter((p) => p.category === 'Profissional').map(toRow);
-    if (!all.length) return fail('Nenhum atleta no banco. Rode node seed.js para carregar o elenco inicial.');
+    apply(await loadState());
+    if (!state.players.length) return fail('Nenhum atleta no banco. Rode npm run seed para carregar o elenco inicial.');
     route();
   } catch (e) {
     fail('Não foi possível carregar os dados. Confira se o servidor está rodando e conectado ao MongoDB.');
@@ -180,5 +210,5 @@ themeBtn.addEventListener('click', () => {
   themeLabel();
 });
 themeLabel();
-window.addEventListener('hashchange', () => { if (all.length) route(); });
+window.addEventListener('hashchange', () => { if (state.players) route(); });
 boot();

@@ -5,6 +5,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { MongoClient } = require('mongodb');
+const { parseWidget } = require('./lib/sofascore-widget');
 
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '127.0.0.1'; // só a sua máquina; não há autenticação
@@ -22,6 +23,12 @@ const nz = v => (v === '' || v === undefined) ? null : v;
 const GROUP = { Goleiro: 'GK', Zagueiro: 'CB', Lateral: 'FB', Volante: 'DM', Meia: 'MF', 'Meio-campo': 'MF', Ponta: 'FW', Centroavante: 'FW', Atacante: 'FW' };
 const CAT = { profissional: 'Profissional', 'sub-20': 'Sub-20', 'sub-17': 'Sub-17', 'sub-15': 'Sub-15', historico: 'Histórico' };
 
+// Origem do cadastro (nome completo, nascimento, físico) quando veio do coletor do site do clube.
+const profileSource = d => {
+  const f = d.fieldSources && (d.fieldSources.birthDate || d.fieldSources.fullName);
+  return f ? { sourceId: f.sourceId, collectedAt: String(f.collectedAt || '').slice(0, 10), lastVerifiedAt: d.lastVerifiedAt || null } : null;
+};
+
 // Cada entrada: coleção, ordenação, banco→interface (toUI) e interface→banco (fromUI).
 // fromUI devolve { set, soi }: set é sempre atualizado; soi ($setOnInsert) só na criação.
 const MAPS = {
@@ -33,10 +40,12 @@ const MAPS = {
       return { id: d._id, name: d.name || '', birth: d.birthDate || '', club: ctx.clubs[d.clubId] || '', category: CAT[d.category] || d.category || '',
         position: d.positionLabel || '', foot: d.preferredFoot || 'Não informado', season: ms('season'), status: d.uiStatus || 'Elenco',
         height: d.heightCm == null ? '' : d.heightCm, minutes: ms('minutes'), goals: ms('goals'), assists: ms('assists'), notes: d.notes || '',
-        shirt: d.shirtNumber == null ? '' : d.shirtNumber, group: d.positionGroup || '', official: st.full || null, asOf: st.asOf || '', review: !!st.review };
+        shirt: d.shirtNumber == null ? '' : d.shirtNumber, group: d.positionGroup || '', official: st.full || null, asOf: st.asOf || '', review: !!st.review,
+        fullName: d.fullName || '', birthPlace: d.birthPlace && d.birthPlace.raw ? d.birthPlace.raw : '', weight: d.weightKg == null ? '' : d.weightKg,
+        listed: d.squadStatus !== 'not_listed_on_official_page', profileSource: profileSource(d) };
     },
     fromUI: async (p, id, ctx) => {
-      const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1 } });
+      const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1, name: 1, birthDate: 1, heightCm: 1 } });
       const off = await ctx.db.collection('player_season_stats').findOne({ playerId: id, competitionId: 'comp-serie-b', seasonId: 'season-serie-b-2026' });
       const o = (off && off.stats) || {};
       // só grava como "manual" o que difere do dado oficial carregado do provedor
@@ -52,6 +61,11 @@ const MAPS = {
         squadStatus: 'manual_entry', externalIds: {}, dataCompleteness: { identity: 'partial', physical: 'missing', contract: 'missing', statistics: 'missing' },
         sourceRefs: [{ sourceId: MANUAL_SRC, collectedAt: today() }], lastVerifiedAt: null };
       if (!prev) soi.positions = positions; else if (prev.positionLabel !== label) set.positions = positions;
+      // Campo alterado à mão passa a ter origem "cadastro manual": o coletor do site não o sobrescreve (registra divergência).
+      const ref = { sourceId: MANUAL_SRC, collectedAt: ctx.now, status: 'reported' };
+      [['name', 'name'], ['birthDate', 'birthDate'], ['heightCm', 'heightCm'], ['positionLabel', 'positionLabel'], ['positionGroup', 'positionLabel']].forEach(([f, cmp]) => {
+        if (set[f] != null && (!prev || prev[cmp] !== set[cmp])) set['fieldSources.' + f] = ref;
+      });
       return { set, soi };
     },
   },
@@ -92,6 +106,17 @@ async function getState() {
     const docs = await db.collection(MAPS[key].coll).find({}).sort(MAPS[key].sort).toArray();
     out[key] = docs.map(d => MAPS[key].toUI(d, { clubs, stats }));
   }
+  out.widgets = (await db.collection('sofascore_widgets').find({}).sort({ createdAt: 1, _id: 1 }).toArray())
+    .map(w => ({ id: w._id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' }));
+  const clubDocs = await db.collection('clubs').find({}).toArray();
+  out.club = clubDocs.find(c => c._id === CLUB_ID) || null;
+  out.stadiums = await db.collection('stadiums').find({}).toArray();
+  out.titles = (await db.collection('club_titles').find({ clubId: CLUB_ID }).toArray())
+    .map(t => ({ name: t.competitionName, kind: t.kind, years: t.years || [], count: t.count != null ? t.count : (t.years || []).length }));
+  out.matches = (await db.collection('matches').find({}).sort({ date: 1 }).toArray()).map(m => ({ id: m._id, round: m.round, date: m.date, kickoffAt: m.kickoffAt || null,
+    status: m.status, score: m.score || null, home: clubs[m.homeClubId] || m.homeClubId, away: clubs[m.awayClubId] || m.awayClubId, avaiHome: m.homeClubId === CLUB_ID,
+    involvesAvai: m.homeClubId === CLUB_ID || m.awayClubId === CLUB_ID }));
+  out.sources = (await db.collection('sources').find({}).toArray()).map(s => ({ id: s._id, name: s.name, reliability: s.reliability, url: s.url || null, scope: s.scope || '', usedInLoad: !!s.usedInLoad }));
   const t = await db.collection('tactical_profiles').findOne({ _id: 'avai-current' });
   out.tactical = t ? { text: t.modelText || '', formation: t.formation || '', pressing: t.pressing || '' } : {};
   out.roles = (t && t.roles) || [];
@@ -109,6 +134,24 @@ async function saveTactical(fields) {
   const soi = { clubId: CLUB_ID, createdAt: now };
   if (!has(fields, 'roles')) soi.roles = [];
   await db.collection('tactical_profiles').updateOne({ _id: 'avai-current' }, { $set: Object.assign({}, fields, { updatedAt: now }), $setOnInsert: soi }, { upsert: true });
+}
+
+// Widgets do SofaScore: só um link validado de widgets.sofascore.com é gravado.
+const WIDGET_TARGETS = { player: 'players', club: 'clubs', competition: 'competitions', match: 'matches' };
+async function saveWidget(id, body) {
+  const r = parseWidget(body);
+  if (r.error) return { code: 400, error: r.error };
+  const w = r.value, target = db.collection(WIDGET_TARGETS[w.entityType]);
+  const ent = await target.findOne({ _id: w.entityId }, { projection: { externalIds: 1 } });
+  if (!ent) return { code: 404, error: 'entidade não encontrada' };
+  const now = new Date().toISOString();
+  await db.collection('sofascore_widgets').updateOne({ _id: id }, { $set: Object.assign({}, w, { updatedAt: now }),
+    $setOnInsert: { createdAt: now, sourceRefs: [{ sourceId: 'src-sofascore-widgets', collectedAt: today() }] } }, { upsert: true });
+  // O ID do SofaScore citado no link vira identificador externo da entidade (sem sobrescrever um já registrado).
+  const ext = ent.externalIds && typeof ent.externalIds === 'object' ? ent.externalIds : null;
+  if (w.sofascoreRef && w.sofascoreRef.entityType === w.entityType && !(ext && ext.sofascore))
+    await target.updateOne({ _id: w.entityId }, { $set: ext ? { 'externalIds.sofascore': w.sofascoreRef.id } : { externalIds: { sofascore: w.sofascoreRef.id } } });
+  return { code: 200, widget: { id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' } };
 }
 
 function readBody(req) {
@@ -138,6 +181,13 @@ async function api(req, res, parts) {
     await saveTactical({ roles: b });
     return send(res, 200, { ok: true });
   }
+  if (write && parts.length === 2 && parts[0] === 'widgets') {
+    const id = decodeURIComponent(parts[1]);
+    if (!/^[\w-]{1,80}$/.test(id)) return send(res, 400, { error: 'id inválido' });
+    if (m === 'DELETE') { await db.collection('sofascore_widgets').deleteOne({ _id: id }); return send(res, 200, { ok: true }); }
+    const r = await saveWidget(id, await readBody(req));
+    return send(res, r.code, r.error ? { error: r.error } : { ok: true, widget: r.widget });
+  }
   if (write && parts.length === 2 && has(MAPS, parts[0])) {
     const id = decodeURIComponent(parts[1]);
     if (!id || id.length > 120) return send(res, 400, { error: 'id inválido' });
@@ -156,8 +206,6 @@ function serveStatic(pathname, res) {
   if (file.indexOf(PUBLIC + path.sep) !== 0) { res.writeHead(403); return res.end('Proibido'); }
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404); return res.end(rel === 'index.html' ? 'Coloque o seu HTML em public/index.html' : 'Não encontrado'); }
-    if (path.extname(file) === '.html' && buf.indexOf('<script>') !== -1 && buf.indexOf('api-shim.js') === -1)
-      buf = Buffer.from(buf.toString('utf8').replace('<script>', '<script src="/api-shim.js"></script>\n<script>'));
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     res.end(buf);
   });
@@ -178,5 +226,8 @@ const server = http.createServer(async (req, res) => {
   db = client.db(DB_NAME);
   await db.collection('sources').updateOne({ _id: MANUAL_SRC }, { $setOnInsert: { name: 'Cadastro manual (interface Scout Avaí)', type: 'manual', url: null, publisher: null,
     reliability: 'unverified', scope: 'Dados digitados na interface; exigem verificação.', usedInLoad: false, collectedAt: null } }, { upsert: true });
+  await db.collection('sources').updateOne({ _id: 'src-sofascore-widgets' }, { $setOnInsert: { name: 'Sofascore — widgets incorporados', type: 'embed', url: 'https://corporate.sofascore.com/br/widgets',
+    publisher: 'Sofascore', reliability: 'medium', scope: 'Widgets visuais (iframe) exibidos na interface. Os números ficam no SofaScore: não são gravados no banco nem lidos pela IA.',
+    usedInLoad: false, collectedAt: null } }, { upsert: true });
   server.listen(PORT, HOST, () => console.log('Scout Avaí em http://' + HOST + ':' + PORT + '  (banco: ' + DB_NAME + ')'));
 })().catch(e => { console.error('ERRO ao iniciar:', e.message); process.exit(1); });
