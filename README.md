@@ -53,3 +53,35 @@ Requer Node.js 18+. Com Node 20.6+ também funciona `node --env-file=.env seed.j
 - Avaí — história e títulos: https://avai.com.br/clube/historia/
 - Avaí — Ressacada: https://avai.com.br/clube/ressacada/
 - CBF — Série B 2026 (complementar, não usada): https://www.cbf.com.br/futebol-brasileiro/times/campeonato-brasileiro/serie-b/2026/20058?tab=atletas
+
+## Widgets do SofaScore
+A interface exibe widgets oficiais do SofaScore (iframes gratuitos) na ficha do atleta, na página do clube e no painel (Série B).
+1. No sofascore.com, abra a página do atleta, time ou campeonato e use a opção de incorporar (embed).
+2. Na interface, abra "Adicionar widget do SofaScore", cole o código do iframe (ou o link) e salve.
+
+Só links `https://widgets.sofascore.com/...` são aceitos. O servidor guarda apenas o link validado na coleção `sofascore_widgets`. Quando o link traz o ID do SofaScore (ex.: `/player/971037`), ele é registrado em `externalIds.sofascore` da entidade.
+Os números do widget pertencem ao SofaScore: não são gravados na base nem usados nas análises.
+
+Testes: `npm test`.
+
+## Atualização do elenco pelo site oficial do Avaí
+```bash
+npm run sync:avai               # coleta e grava
+npm run sync:avai -- --dry-run  # mostra o que mudaria, sem gravar
+npm run sync:avai -- --force    # reprocessa mesmo se o site não mudou
+```
+- Fonte: API WordPress pública do site do clube (`avai.com.br/wp-json/wp/v2/elenco-profissional`), que traz número, posição, nome completo, nascimento, naturalidade, altura e peso. O `robots.txt` do site libera a coleta. São 2 requisições por execução, e uma vez por dia basta (ex.: cron `17 6 * * *`).
+- Cada campo guarda a origem em `fieldSources`. O site só sobrescreve campo vazio ou campo que ele mesmo gravou. Se outra origem já preencheu o campo com valor diferente, o valor atual é mantido e a divergência vai para `field_conflicts`.
+- Atleta que sai da página não é apagado: vira `squadStatus: not_listed_on_official_page` e some da lista do elenco atual.
+- Resposta idêntica à anterior não é reprocessada (hash em `raw_payloads`). Cada execução fica em `sync_runs`, com a lista de alterações.
+- Depois da coleta, o vínculo de cada atleta com a ESPN é cruzado com o nome completo e a camisa oficiais (`crossCheck` em `player_season_stats`). O que diverge fica marcado como "conferir fonte" na interface.
+- O `seed.js` agora só **insere** atletas novos e não sobrescreve os existentes (use `--force` para o comportamento antigo).
+
+## Interface
+`node server.js` e abra http://127.0.0.1:3000. Telas:
+- **Análise:** Painel, Elenco atual, Perfil do elenco (profundidade por posição sobre o campo, idade, faixas etárias, utilização, origem e altura) e Comparador.
+- **Prospecção:** Alvos de mercado e Relatórios.
+- **Clube:** Modelo de jogo (identidade e requisitos por função) e História e títulos (com registro de fatos).
+- **Dados:** Cadastro de atletas (inclusão, edição, importação por CSV) e Fontes e backup (exportação em JSON).
+
+Os módulos da antiga página `legado.html` foram incorporados a essas telas e gravam direto no MongoDB.

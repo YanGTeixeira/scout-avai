@@ -6,7 +6,7 @@
 <title>Scout Avaí</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
 <script id="theme-init">(function(){var t;try{t=localStorage.getItem("scout_theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t})()</script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/app.css">
@@ -15,30 +15,44 @@
 <a class="skip" href="#main">Ir para o conteúdo</a>
 <div class="shell">
   <nav class="rail" aria-label="Principal">
-    <div class="brand"><strong>Scout Avaí</strong><span>Futebol profissional</span></div>
+    <div class="brand">
+      <svg class="crest" viewBox="0 0 38 44" aria-hidden="true"><path d="M19 1 36 7v14c0 11-7.5 18.5-17 22C9.5 39.5 2 32 2 21V7Z" fill="#0b5cad" stroke="#fff" stroke-width="2"/><path d="M8 13h22M8 20h22M8 27h22" stroke="#fff" stroke-width="3" opacity=".9"/></svg>
+      <div><strong>Scout Avaí</strong><span>Análise e mercado</span></div>
+    </div>
     <div>
       <h2>Análise</h2>
       <ul>
         <li><a href="#/painel" data-route="painel">Painel</a></li>
         <li><a href="#/elenco" data-route="elenco">Elenco atual</a></li>
+        <li><a href="#/perfil" data-route="perfil">Perfil do elenco</a></li>
         <li><a href="#/comparador" data-route="comparador">Comparador</a></li>
       </ul>
     </div>
     <div>
-      <h2>Clube</h2>
-      <ul><li><a href="#/clube" data-route="clube">História e títulos</a></li></ul>
-    </div>
-    <div>
       <h2>Prospecção</h2>
       <ul>
-        <li class="soon">Alvos de mercado <small>em breve</small></li>
-        <li><a href="/legado.html">Módulos anteriores</a></li>
+        <li><a href="#/mercado" data-route="mercado">Alvos de mercado</a></li>
+        <li><a href="#/relatorios" data-route="relatorios">Relatórios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Clube</h2>
+      <ul>
+        <li><a href="#/modelo" data-route="modelo">Modelo de jogo</a></li>
+        <li><a href="#/clube" data-route="clube">História e títulos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Dados</h2>
+      <ul>
+        <li><a href="#/atletas" data-route="atletas">Cadastro de atletas</a></li>
+        <li><a href="#/fontes" data-route="fontes">Fontes e backup</a></li>
       </ul>
     </div>
     <button class="btn theme" id="theme" type="button">Tema escuro</button>
   </nav>
   <div class="page">
-    <header class="page-head"><h1 id="title"></h1><p class="meta" id="meta"></p></header>
+    <header class="page-head"><div><h1 id="title"></h1><p class="meta" id="meta"></p></div><div class="actions" id="actions"></div></header>
     <main id="main" tabindex="-1" aria-live="polite"></main>
   </div>
 </div>

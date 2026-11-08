@@ -1,4 +1,4 @@
-import { el, fmtN } from './util.js';
+import { el, fmtN, age } from './util.js';
 import { STATS, RATES } from './metrics.js';
 
 export function comparador(all, cmp) {
@@ -9,7 +9,8 @@ export function comparador(all, cmp) {
   function paint() {
     const a = w.find((p) => p.id === cmp.a), b = w.find((p) => p.id === cmp.b);
     if (!a || !b) return body.replaceChildren(el('p', { class: 'state' }, 'Escolha dois atletas para comparar. Só aparecem atletas com estatísticas na fonte.'));
-    const rows = [...STATS, ...RATES].map((m) => ({ m, x: m.f(a.official), y: m.f(b.official) })).filter((r) => r.x != null || r.y != null);
+    const PROFILE = [{ l: 'Idade', neutral: true, f: (p) => age(p.birth) }, { l: 'Altura (cm)', neutral: true, f: (p) => Number(p.height) || null }, { l: 'Peso (kg)', neutral: true, d: 1, f: (p) => Number(p.weight) || null }];
+    const rows = [...PROFILE.map((m) => ({ m, x: m.f(a), y: m.f(b) })), ...[...STATS, ...RATES].map((m) => ({ m, x: m.f(a.official), y: m.f(b.official) }))].filter((r) => r.x != null || r.y != null);
     body.replaceChildren(
       el('div', { class: 'crow head' }, el('b', { class: 'ha' }, a.name), el('b', { class: 'hb' }, b.name)),
       ...rows.map(({ m, x, y }) => {

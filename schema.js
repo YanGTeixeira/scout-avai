@@ -5,16 +5,17 @@ const COLLECTIONS = [
   'sources', 'clubs', 'stadiums', 'competitions', 'seasons', 'players', 'matches',
   'club_titles', 'club_history',
   'contracts', 'player_match_stats', 'player_season_stats',
-  'scouting_reports', 'tactical_profiles', 'observations', 'obsidian_documents',
+  'scouting_reports', 'tactical_profiles', 'observations', 'obsidian_documents', 'sofascore_widgets',
+  'raw_payloads', 'sync_runs', 'field_conflicts',
 ];
 
 // Campos "gerenciados pela fonte": o seed os atualiza a cada execução ($set).
-// Todo o resto só é gravado na PRIMEIRA inserção ($setOnInsert), para que
-// dados preenchidos depois (nascimento, contrato, estatísticas...) não sejam sobrescritos.
+// Todo o resto só é gravado na PRIMEIRA inserção ($setOnInsert).
 // Coleções sem entrada aqui são tratadas como dado de referência (todos os campos via $set).
+// players: lista vazia = o seed só insere atletas novos e nunca sobrescreve os existentes.
+// Quem atualiza o elenco é o coletor do site do clube (npm run sync:avai), que guarda a origem de cada campo.
 const MANAGED_FIELDS = {
-  players: ['clubId', 'name', 'slug', 'category', 'shirtNumber', 'positionLabel', 'positionGroup',
-            'positions', 'squadStatus', 'externalIds', 'dataCompleteness', 'sourceRefs', 'lastVerifiedAt'],
+  players: [],
 };
 
 const str = { bsonType: 'string' };
@@ -64,6 +65,15 @@ const VALIDATORS = {
     bsonType: 'object',
     required: ['_id', 'vaultPath', 'contentHash'],
   },
+  sofascore_widgets: {
+    bsonType: 'object',
+    required: ['_id', 'entityType', 'entityId', 'src', 'height'],
+    properties: {
+      entityType: { enum: ['player', 'club', 'competition', 'match'] },
+      src: { bsonType: 'string', pattern: '^https://widgets\\.sofascore\\.com/' },
+      height: { bsonType: ['int', 'long', 'double'] },
+    },
+  },
 };
 
 const INDEXES = {
@@ -72,6 +82,7 @@ const INDEXES = {
     [{ clubId: 1, shirtNumber: 1 }, { name: 'club_shirt' }],
     [{ positionGroup: 1 }, { name: 'position_group' }],
     [{ name: 1 }, { name: 'name' }],
+    [{ 'externalIds.avaiSite': 1 }, { name: 'ext_avai_site', sparse: true }],
   ],
   matches: [
     [{ seasonId: 1, date: 1 }, { name: 'season_date' }],
@@ -95,6 +106,10 @@ const INDEXES = {
     [{ vaultPath: 1 }, { unique: true, name: 'uniq_vault_path' }],
     [{ contentHash: 1 }, { name: 'content_hash' }],
   ],
+  sofascore_widgets: [[{ entityType: 1, entityId: 1 }, { name: 'entity' }]],
+  sync_runs: [[{ source: 1, startedAt: -1 }, { name: 'source_started' }]],
+  field_conflicts: [[{ entityType: 1, entityId: 1, field: 1 }, { name: 'entity_field' }], [{ status: 1 }, { name: 'status' }]],
+  raw_payloads: [[{ provider: 1, fetchedAt: -1 }, { name: 'provider_fetched' }]],
 };
 
 module.exports = { COLLECTIONS, MANAGED_FIELDS, VALIDATORS, INDEXES };

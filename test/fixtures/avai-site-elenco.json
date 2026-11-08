@@ -1,0 +1,102 @@
+{
+ "categories": [
+  {
+   "id": 33,
+   "name": "Atacante",
+   "slug": "6atacante"
+  },
+  {
+   "id": 30,
+   "name": "Goleiro",
+   "slug": "1goleiro"
+  },
+  {
+   "id": 79,
+   "name": "Lateral",
+   "slug": "3lateral"
+  },
+  {
+   "id": 32,
+   "name": "Meio-campo",
+   "slug": "5meio-campo"
+  },
+  {
+   "id": 80,
+   "name": "Volante",
+   "slug": "4volante"
+  },
+  {
+   "id": 31,
+   "name": "Zagueiro",
+   "slug": "2zagueiro"
+  }
+ ],
+ "players": [
+  {
+   "id": 209180,
+   "modified_gmt": "2026-10-14T16:43:02",
+   "slug": "kaua-santos",
+   "link": "https://avai.com.br/elenco-profissional/kaua-santos/",
+   "title": {
+    "rendered": "Kauã Santos"
+   },
+   "meta": {
+    "_angie_page": false,
+    "foto-do-jogador": "209596",
+    "numero": "30",
+    "nome-completo": "Kauã Gabriel Pereira dos Santos",
+    "naturalidade": "Rio de Janeiro-RJ",
+    "nascimento": "23/11/2006",
+    "altura": "1,65",
+    "peso": "62 Kg"
+   },
+   "categoria-do-jogador": [
+    32
+   ]
+  },
+  {
+   "id": 2129,
+   "modified_gmt": "2026-10-14T17:03:42",
+   "slug": "igor-bohn",
+   "link": "https://avai.com.br/elenco-profissional/igor-bohn/",
+   "title": {
+    "rendered": "Igor Bohn"
+   },
+   "meta": {
+    "_angie_page": false,
+    "foto-do-jogador": "209585",
+    "numero": "1",
+    "nome-completo": "Igor José Bohn",
+    "naturalidade": "Panambi-RS",
+    "nascimento": "05/02/1996",
+    "altura": "1.93",
+    "peso": "88.9"
+   },
+   "categoria-do-jogador": [
+    30
+   ]
+  },
+  {
+   "id": 209179,
+   "modified_gmt": "2026-10-14T16:42:36",
+   "slug": "filipinho",
+   "link": "https://avai.com.br/elenco-profissional/filipinho/",
+   "title": {
+    "rendered": "Filipinho"
+   },
+   "meta": {
+    "_angie_page": false,
+    "foto-do-jogador": "209595",
+    "numero": "59",
+    "nome-completo": " Filipe Gabriel Rios Rodrigues",
+    "naturalidade": "",
+    "nascimento": "13/02/2006",
+    "altura": "1,70",
+    "peso": "62,8 kg"
+   },
+   "categoria-do-jogador": [
+    33
+   ]
+  }
+ ]
+}
