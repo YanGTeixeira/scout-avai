@@ -17,6 +17,20 @@ Pesquisa de 2026-11-08. Objetivo: encontrar fontes **autorizadas** (licença, pl
 
 **Próximo passo sugerido:** criar a conta gratuita da API-Football e, com as 100 requisições/dia, verificar se a Série B 2026 tem `statistics` por atleta preenchidas (minutos, assistências, passes, desarmes, nota). Se tiver, ela cobre boa parte das lacunas do documento 01 com custo baixo. Em paralelo, o teste de 14 dias da Sportmonks serve de comparação.
 
+## Teste real da API-Football (2026-11-08, conta gratuita)
+
+| Item | Resultado |
+|---|---|
+| Cobertura declarada (`/leagues?country=Brazil`) | **Série A e Série B 2026**, Paulista A1 e Carioca 1: estatísticas por partida e **por atleta**. Série C, Série D, Catarinense e demais: só escalações, eventos e tabela (`statistics_players: false`). Lesões: só Série A |
+| Plano grátis | **Só temporadas 2022 a 2024.** A temporada 2026 retorna `Free plans do not have access to this season`. Parâmetro `last` também bloqueado |
+| Estatística por atleta (Série B 2024, Avaí) | Minutos, jogos, titularidade, nota, gols, assistências, finalizações, passes (total e decisivos), desarmes, bloqueios, interceptações, duelos, dribles, faltas, cartões, pênaltis. Ficha com nascimento, nacionalidade, altura e peso. Campos ausentes vêm `null`. `passes.accuracy` na temporada não é percentual: verificar antes de usar |
+| Por partida (`/fixtures/players`) | Mesmos grupos de estatística, com minutos e nota por jogo |
+| Elenco atual (`/players/squads`) | Liberado no grátis: 39 atletas do Avaí. 32 dos nossos 35 batem pela camisa e 24 pelo nome exato, então o casamento precisa do *resolver* (camisa + nome) |
+| Transferências (`/transfers`) | Liberado no grátis, com data, tipo (Free, Loan, N/A) e clubes |
+| Limites | 100 req/dia e 10 req/min no grátis (headers `x-ratelimit-*`) |
+
+**Conclusão:** a API-Football tem os dados individuais da Série B 2026 de que o projeto precisa, mas **a temporada atual só vem em plano pago** (Pro, ~US$ 19/mês, 7.500 req/dia, a confirmar na contratação).
+
 ## 1. APIs comerciais com dados por atleta
 
 ### API-Football (api-sports.io)
