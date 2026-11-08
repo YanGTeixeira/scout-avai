@@ -76,3 +76,12 @@ npm run sync:avai -- --force    # reprocessa mesmo se o site não mudou
 - Resposta idêntica à anterior não é reprocessada (hash em `raw_payloads`). Cada execução fica em `sync_runs`, com a lista de alterações.
 - Depois da coleta, o vínculo de cada atleta com a ESPN é cruzado com o nome completo e a camisa oficiais (`crossCheck` em `player_season_stats`). O que diverge fica marcado como "conferir fonte" na interface.
 - O `seed.js` agora só **insere** atletas novos e não sobrescreve os existentes (use `--force` para o comportamento antigo).
+
+## Interface
+`node server.js` e abra http://127.0.0.1:3000. Telas:
+- **Análise:** Painel, Elenco atual, Perfil do elenco (profundidade por posição sobre o campo, idade, faixas etárias, utilização, origem e altura) e Comparador.
+- **Prospecção:** Alvos de mercado e Relatórios.
+- **Clube:** Modelo de jogo (identidade e requisitos por função) e História e títulos (com registro de fatos).
+- **Dados:** Cadastro de atletas (inclusão, edição, importação por CSV) e Fontes e backup (exportação em JSON).
+
+Os módulos da antiga página `legado.html` foram incorporados a essas telas e gravam direto no MongoDB.

@@ -1,31 +1,58 @@
+/* Scout Avaí — tokens.
+   Azul e branco do clube; navy no trilho; a "prancheta" (campo em giz) é o único elemento expressivo. */
 :root {
-  --c-paper: #fff;
-  --c-ground: #f1f3f5;
-  --c-rule: #d9dee3;
-  --c-rule-strong: #b9c1c9;
-  --c-ink: #18212b;
-  --c-ink-2: #566270;
-  --c-ink-3: #78848f;
-  --c-club: #0a4d8c;
-  --c-club-soft: #e4edf6;
+  --c-page: #eef2f6;
+  --c-ground: #eef2f6;
+  --c-paper: #ffffff;
+  --c-rule: #dbe2ea;
+  --c-rule-strong: #b8c4d1;
+  --c-ink: #0f1d2e;
+  --c-ink-2: #4a5a6c;
+  --c-ink-3: #6f7d8b;
+  --c-club: #0b5cad;
+  --c-club-ink: #ffffff;
+  --c-club-soft: #e3eefa;
+  --c-navy: #0a2540;
+  --c-rail-ink: #b9c9dc;
+  --c-rail-mute: #7f95ae;
+  --c-rail-hover: #12345a;
   --c-flag: #8a5700;
   --c-flag-bg: #fbf0d5;
+  --c-good: #006300;
+  --c-bad: #b3261e;
   --c-yellow: #d9a400;
-  --c-red: #b3261e;
-  --c-on-dot: #fff;
-  --g-gk: #5f6b78;
-  --g-cb: #0a4d8c;
-  --g-fb: #1b7f79;
-  --g-dm: #6b4fa0;
-  --g-mf: #b4551c;
-  --g-fw: #2a7a3a;
+  --c-red: #c62828;
+  --c-pitch: #f5f9fd;
+  --c-chalk: #c4d3e3;
+  --c-band: #eaf2fb;
+  --c-on-dot: #ffffff;
+  --shadow-pop: 0 12px 32px rgb(10 37 64 / .18);
+
+  /* Grupos de posição: paleta categórica validada (ordem fixa, nunca reciclada). */
+  --g-gk: #2a78d6;
+  --g-cb: #eb6834;
+  --g-fb: #1baf7a;
+  --g-dm: #eda100;
+  --g-mf: #e87ba4;
+  --g-fw: #008300;
+  /* Faixas etárias: rampa ordinal de um só tom (mais jovem → mais velho). */
+  --age-1: #86b6ef;
+  --age-2: #5598e7;
+  --age-3: #2a78d6;
+  --age-4: #184f95;
+  /* Duas séries: titular / reserva. */
+  --s-1: #2a78d6;
+  --s-2: #eb6834;
   color-scheme: light;
 
   --font-ui: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-kit: 'Barlow Semi Condensed', 'Barlow', system-ui, sans-serif;
   --fs-1: 12px;
   --fs-2: 14px;
   --fs-3: 16px;
-  --fs-4: 22px;
+  --fs-4: 20px;
+  --fs-5: 28px;
+  --fs-6: 40px;
 
   --sp-1: 4px;
   --sp-2: 8px;
@@ -33,34 +60,55 @@
   --sp-4: 16px;
   --sp-5: 24px;
   --sp-6: 32px;
+  --sp-7: 48px;
 
-  --r-1: 2px;
-  --rail-w: 208px;
-  --row-h: 38px;
-  --drawer-w: 420px;
+  --r-1: 4px;
+  --r-2: 6px;
+  --rail-w: 232px;
+  --row-h: 40px;
+  --drawer-w: 440px;
   --t-fast: 160ms;
 }
 
 :root[data-theme='dark'] {
-  --c-paper: #152230;
-  --c-ground: #0e1620;
-  --c-rule: #243445;
-  --c-rule-strong: #35495e;
-  --c-ink: #e6edf4;
-  --c-ink-2: #a3b2c1;
-  --c-ink-3: #7c8b9b;
-  --c-club: #6db0ec;
-  --c-club-soft: #1b3047;
+  --c-page: #0a1220;
+  --c-ground: #0a1220;
+  --c-paper: #122033;
+  --c-rule: #22344b;
+  --c-rule-strong: #34495f;
+  --c-ink: #e8eef5;
+  --c-ink-2: #a9b7c6;
+  --c-ink-3: #8191a3;
+  --c-club: #5aa2ec;
+  --c-club-ink: #08111d;
+  --c-club-soft: #17304d;
+  --c-navy: #060d18;
+  --c-rail-ink: #a9bbd0;
+  --c-rail-mute: #6e849c;
+  --c-rail-hover: #10233a;
   --c-flag: #f0c36a;
   --c-flag-bg: #3a2f14;
+  --c-good: #3ccf6a;
+  --c-bad: #ff8a80;
   --c-yellow: #e6b422;
-  --c-red: #ff7b72;
-  --c-on-dot: #0e1620;
-  --g-gk: #9aa7b5;
-  --g-cb: #6db0ec;
-  --g-fb: #4cc2b8;
-  --g-dm: #b49be0;
-  --g-mf: #f0a070;
-  --g-fw: #6fcf86;
+  --c-red: #ff6f6f;
+  --c-pitch: #0f1c2d;
+  --c-chalk: #2c4560;
+  --c-band: #14283f;
+  --c-on-dot: #ffffff;
+  --shadow-pop: 0 12px 32px rgb(0 0 0 / .5);
+
+  --g-gk: #3987e5;
+  --g-cb: #d95926;
+  --g-fb: #199e70;
+  --g-dm: #c98500;
+  --g-mf: #d55181;
+  --g-fw: #008300;
+  --age-1: #1c5cab;
+  --age-2: #2a78d6;
+  --age-3: #5598e7;
+  --age-4: #86b6ef;
+  --s-1: #3987e5;
+  --s-2: #d95926;
   color-scheme: dark;
 }

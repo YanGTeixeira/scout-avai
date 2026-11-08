@@ -45,7 +45,7 @@ const MAPS = {
         listed: d.squadStatus !== 'not_listed_on_official_page', profileSource: profileSource(d) };
     },
     fromUI: async (p, id, ctx) => {
-      const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1 } });
+      const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1, name: 1, birthDate: 1, heightCm: 1 } });
       const off = await ctx.db.collection('player_season_stats').findOne({ playerId: id, competitionId: 'comp-serie-b', seasonId: 'season-serie-b-2026' });
       const o = (off && off.stats) || {};
       // só grava como "manual" o que difere do dado oficial carregado do provedor
@@ -61,6 +61,11 @@ const MAPS = {
         squadStatus: 'manual_entry', externalIds: {}, dataCompleteness: { identity: 'partial', physical: 'missing', contract: 'missing', statistics: 'missing' },
         sourceRefs: [{ sourceId: MANUAL_SRC, collectedAt: today() }], lastVerifiedAt: null };
       if (!prev) soi.positions = positions; else if (prev.positionLabel !== label) set.positions = positions;
+      // Campo alterado à mão passa a ter origem "cadastro manual": o coletor do site não o sobrescreve (registra divergência).
+      const ref = { sourceId: MANUAL_SRC, collectedAt: ctx.now, status: 'reported' };
+      [['name', 'name'], ['birthDate', 'birthDate'], ['heightCm', 'heightCm'], ['positionLabel', 'positionLabel'], ['positionGroup', 'positionLabel']].forEach(([f, cmp]) => {
+        if (set[f] != null && (!prev || prev[cmp] !== set[cmp])) set['fieldSources.' + f] = ref;
+      });
       return { set, soi };
     },
   },
@@ -103,6 +108,15 @@ async function getState() {
   }
   out.widgets = (await db.collection('sofascore_widgets').find({}).sort({ createdAt: 1, _id: 1 }).toArray())
     .map(w => ({ id: w._id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' }));
+  const clubDocs = await db.collection('clubs').find({}).toArray();
+  out.club = clubDocs.find(c => c._id === CLUB_ID) || null;
+  out.stadiums = await db.collection('stadiums').find({}).toArray();
+  out.titles = (await db.collection('club_titles').find({ clubId: CLUB_ID }).toArray())
+    .map(t => ({ name: t.competitionName, kind: t.kind, years: t.years || [], count: t.count != null ? t.count : (t.years || []).length }));
+  out.matches = (await db.collection('matches').find({}).sort({ date: 1 }).toArray()).map(m => ({ id: m._id, round: m.round, date: m.date, kickoffAt: m.kickoffAt || null,
+    status: m.status, score: m.score || null, home: clubs[m.homeClubId] || m.homeClubId, away: clubs[m.awayClubId] || m.awayClubId, avaiHome: m.homeClubId === CLUB_ID,
+    involvesAvai: m.homeClubId === CLUB_ID || m.awayClubId === CLUB_ID }));
+  out.sources = (await db.collection('sources').find({}).toArray()).map(s => ({ id: s._id, name: s.name, reliability: s.reliability, url: s.url || null, scope: s.scope || '', usedInLoad: !!s.usedInLoad }));
   const t = await db.collection('tactical_profiles').findOne({ _id: 'avai-current' });
   out.tactical = t ? { text: t.modelText || '', formation: t.formation || '', pressing: t.pressing || '' } : {};
   out.roles = (t && t.roles) || [];
@@ -192,8 +206,6 @@ function serveStatic(pathname, res) {
   if (file.indexOf(PUBLIC + path.sep) !== 0) { res.writeHead(403); return res.end('Proibido'); }
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404); return res.end(rel === 'index.html' ? 'Coloque o seu HTML em public/index.html' : 'Não encontrado'); }
-    if (path.extname(file) === '.html' && buf.indexOf('<script>') !== -1 && buf.indexOf('api-shim.js') === -1)
-      buf = Buffer.from(buf.toString('utf8').replace('<script>', '<script src="/api-shim.js"></script>\n<script>'));
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     res.end(buf);
   });
