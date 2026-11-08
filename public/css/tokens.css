@@ -1,0 +1,66 @@
+:root {
+  --c-paper: #fff;
+  --c-ground: #f1f3f5;
+  --c-rule: #d9dee3;
+  --c-rule-strong: #b9c1c9;
+  --c-ink: #18212b;
+  --c-ink-2: #566270;
+  --c-ink-3: #78848f;
+  --c-club: #0a4d8c;
+  --c-club-soft: #e4edf6;
+  --c-flag: #8a5700;
+  --c-flag-bg: #fbf0d5;
+  --c-yellow: #d9a400;
+  --c-red: #b3261e;
+  --c-on-dot: #fff;
+  --g-gk: #5f6b78;
+  --g-cb: #0a4d8c;
+  --g-fb: #1b7f79;
+  --g-dm: #6b4fa0;
+  --g-mf: #b4551c;
+  --g-fw: #2a7a3a;
+  color-scheme: light;
+
+  --font-ui: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-1: 12px;
+  --fs-2: 14px;
+  --fs-3: 16px;
+  --fs-4: 22px;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  --r-1: 2px;
+  --rail-w: 208px;
+  --row-h: 38px;
+  --drawer-w: 420px;
+  --t-fast: 160ms;
+}
+
+:root[data-theme='dark'] {
+  --c-paper: #152230;
+  --c-ground: #0e1620;
+  --c-rule: #243445;
+  --c-rule-strong: #35495e;
+  --c-ink: #e6edf4;
+  --c-ink-2: #a3b2c1;
+  --c-ink-3: #7c8b9b;
+  --c-club: #6db0ec;
+  --c-club-soft: #1b3047;
+  --c-flag: #f0c36a;
+  --c-flag-bg: #3a2f14;
+  --c-yellow: #e6b422;
+  --c-red: #ff7b72;
+  --c-on-dot: #0e1620;
+  --g-gk: #9aa7b5;
+  --g-cb: #6db0ec;
+  --g-fb: #4cc2b8;
+  --g-dm: #b49be0;
+  --g-mf: #f0a070;
+  --g-fw: #6fcf86;
+  color-scheme: dark;
+}

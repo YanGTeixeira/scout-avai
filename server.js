@@ -32,7 +32,8 @@ const MAPS = {
       const ms = f => (d.manualStats && d.manualStats[f] != null) ? d.manualStats[f] : (st[f] != null ? st[f] : '');
       return { id: d._id, name: d.name || '', birth: d.birthDate || '', club: ctx.clubs[d.clubId] || '', category: CAT[d.category] || d.category || '',
         position: d.positionLabel || '', foot: d.preferredFoot || 'Não informado', season: ms('season'), status: d.uiStatus || 'Elenco',
-        height: d.heightCm == null ? '' : d.heightCm, minutes: ms('minutes'), goals: ms('goals'), assists: ms('assists'), notes: d.notes || '' };
+        height: d.heightCm == null ? '' : d.heightCm, minutes: ms('minutes'), goals: ms('goals'), assists: ms('assists'), notes: d.notes || '',
+        shirt: d.shirtNumber == null ? '' : d.shirtNumber, group: d.positionGroup || '', official: st.full || null, asOf: st.asOf || '', review: !!st.review };
     },
     fromUI: async (p, id, ctx) => {
       const prev = await ctx.col.findOne({ _id: id }, { projection: { positionLabel: 1 } });
@@ -84,7 +85,7 @@ async function getState() {
   (await db.collection('clubs').find({}, { projection: { name: 1, shortName: 1 } }).toArray()).forEach(c => { clubs[c._id] = c.shortName || c.name; });
   const stats = {};
   (await db.collection('player_season_stats').find({ competitionId: 'comp-serie-b', seasonId: 'season-serie-b-2026' }).toArray()).forEach(x => {
-    stats[x.playerId] = { season: '2026', minutes: x.minutes, goals: x.stats && x.stats.goals, assists: x.stats && x.stats.assists };
+    stats[x.playerId] = { season: '2026', minutes: x.minutes, goals: x.stats && x.stats.goals, assists: x.stats && x.stats.assists, full: x.stats, asOf: x.asOf, review: !!x.needsReview };
   });
   const out = {};
   for (const key of Object.keys(MAPS)) {
@@ -155,7 +156,7 @@ function serveStatic(pathname, res) {
   if (file.indexOf(PUBLIC + path.sep) !== 0) { res.writeHead(403); return res.end('Proibido'); }
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404); return res.end(rel === 'index.html' ? 'Coloque o seu HTML em public/index.html' : 'Não encontrado'); }
-    if (path.basename(file) === 'index.html' && buf.indexOf('api-shim.js') === -1)
+    if (path.extname(file) === '.html' && buf.indexOf('<script>') !== -1 && buf.indexOf('api-shim.js') === -1)
       buf = Buffer.from(buf.toString('utf8').replace('<script>', '<script src="/api-shim.js"></script>\n<script>'));
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     res.end(buf);
