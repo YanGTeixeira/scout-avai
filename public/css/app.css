@@ -128,3 +128,16 @@ dd{text-align:right;font-weight:500}
   .timeline li{grid-template-columns:1fr;gap:0}
   .btn.theme{margin-top:0}
 }
+
+/* Widgets do SofaScore */
+.widgets{display:grid;gap:var(--sp-2)}
+.widget{margin:0;max-width:760px;background:var(--c-paper);border:1px solid var(--c-rule)}
+.widget iframe{display:block;width:100%;border:0}
+.widget figcaption{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-2);padding:var(--sp-1) var(--sp-2);border-top:1px solid var(--c-rule);font-size:var(--fs-1);color:var(--c-ink-2)}
+.link{background:none;border:0;padding:0;font:inherit;color:var(--c-club);cursor:pointer;text-decoration:underline}
+.add-widget summary{cursor:pointer;color:var(--c-club);font-weight:500;padding:var(--sp-1) 0}
+.add-widget form{display:grid;gap:var(--sp-2);margin-top:var(--sp-2)}
+.add-widget label{display:grid;gap:var(--sp-1);font-size:var(--fs-1);color:var(--c-ink-2)}
+.add-widget textarea,.add-widget input{width:100%;padding:var(--sp-2);border:1px solid var(--c-rule-strong);border-radius:var(--r-1);background:var(--c-paper);font:inherit;color:var(--c-ink)}
+.add-widget textarea{font-family:ui-monospace,monospace;font-size:var(--fs-1);resize:vertical}
+.add-widget .btn{justify-self:start}

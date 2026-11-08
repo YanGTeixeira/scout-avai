@@ -1,4 +1,5 @@
 import { el, sv, fmtDate, fmtN } from './util.js';
+import { widgetSection } from './widgets.js';
 
 const kv = (pairs) => el('dl', {}, ...pairs.flatMap(([k, v]) => [el('dt', {}, k), el('dd', { class: v == null || v === '' ? 'dim' : null }, v == null || v === '' ? 'Não informado' : String(v))]));
 const Y0 = 1920;
@@ -21,6 +22,7 @@ export function clube(state) {
       el('section', { class: 'block' }, el('h2', {}, `Ressacada${r.popularName ? '' : ''}`), kv([
         ['Estádio', r.name], ['Capacidade', fmtN(r.capacity)], ['Inauguração', fmtDate(r.inauguratedAt)], ['Recorde de público', rec && `${fmtN(rec.attendance)} em ${fmtDate(rec.date)}`],
         ['Centro de treinamento', cfa.name && `${cfa.fields} campos`]]))),
+    el('div', { class: 'block' }, widgetSection(state, 'club', 'club-avai', { heading: 'Avaí no SofaScore', level: 'h2' })),
     el('section', { class: 'block' }, el('h2', {}, 'Títulos'),
       el('p', { class: 'meta' }, 'Cada marca é uma temporada, de 1920 a 2030. Marca vazada indica vice-campeonato.'),
       ...titles.map((t) => el('div', { class: 'tl' }, el('span', {}, `${t.name} (${t.count})`), strip(t)))),

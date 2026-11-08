@@ -1,6 +1,7 @@
 import { el, fmtDate } from './util.js';
 import { bars, scatter } from './charts.js';
 import { GROUPS, ORDER } from './metrics.js';
+import { widgetSection } from './widgets.js';
 
 const REL = { high: 'alta', medium: 'média', unverified: 'não verificada' };
 const team = (n) => el('span', { class: n === 'Avaí' ? 'me' : null }, n);
@@ -29,6 +30,7 @@ export function painel(all, state, open) {
   const pts = w.filter((p) => p.apps > 0).map((p) => ({ x: p.apps, y: (p.goals || 0) + (p.assists || 0), label: p.shirt ?? '', name: p.name, group: p.group, ref: p }));
   return el('div', { class: 'stack' },
     el('section', { class: 'block' }, el('h2', {}, 'Calendário'), jogos(state.matches || [])),
+    el('div', { class: 'block' }, widgetSection(state, 'competition', 'comp-serie-b', { heading: 'Série B no SofaScore', level: 'h2' })),
     el('section', { class: 'block' }, el('h2', {}, 'Quem participa de gols'),
       el('p', { class: 'meta' }, 'Cada marcador é um atleta, com o número da camisa. Gols mais assistências, por jogos disputados. Clique para abrir a ficha.'),
       pts.length ? scatter(pts, { xl: 'Jogos', yl: 'Gols + assistências', pick: open }) : el('p', { class: 'dim' }, 'Sem estatísticas carregadas.'),

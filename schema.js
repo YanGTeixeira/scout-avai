@@ -5,7 +5,7 @@ const COLLECTIONS = [
   'sources', 'clubs', 'stadiums', 'competitions', 'seasons', 'players', 'matches',
   'club_titles', 'club_history',
   'contracts', 'player_match_stats', 'player_season_stats',
-  'scouting_reports', 'tactical_profiles', 'observations', 'obsidian_documents',
+  'scouting_reports', 'tactical_profiles', 'observations', 'obsidian_documents', 'sofascore_widgets',
 ];
 
 // Campos "gerenciados pela fonte": o seed os atualiza a cada execução ($set).
@@ -64,6 +64,15 @@ const VALIDATORS = {
     bsonType: 'object',
     required: ['_id', 'vaultPath', 'contentHash'],
   },
+  sofascore_widgets: {
+    bsonType: 'object',
+    required: ['_id', 'entityType', 'entityId', 'src', 'height'],
+    properties: {
+      entityType: { enum: ['player', 'club', 'competition', 'match'] },
+      src: { bsonType: 'string', pattern: '^https://widgets\\.sofascore\\.com/' },
+      height: { bsonType: ['int', 'long', 'double'] },
+    },
+  },
 };
 
 const INDEXES = {
@@ -95,6 +104,7 @@ const INDEXES = {
     [{ vaultPath: 1 }, { unique: true, name: 'uniq_vault_path' }],
     [{ contentHash: 1 }, { name: 'content_hash' }],
   ],
+  sofascore_widgets: [[{ entityType: 1, entityId: 1 }, { name: 'entity' }]],
 };
 
 module.exports = { COLLECTIONS, MANAGED_FIELDS, VALIDATORS, INDEXES };

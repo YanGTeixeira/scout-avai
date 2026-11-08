@@ -5,6 +5,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { MongoClient } = require('mongodb');
+const { parseWidget } = require('./lib/sofascore-widget');
 
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '127.0.0.1'; // só a sua máquina; não há autenticação
@@ -92,6 +93,8 @@ async function getState() {
     const docs = await db.collection(MAPS[key].coll).find({}).sort(MAPS[key].sort).toArray();
     out[key] = docs.map(d => MAPS[key].toUI(d, { clubs, stats }));
   }
+  out.widgets = (await db.collection('sofascore_widgets').find({}).sort({ createdAt: 1, _id: 1 }).toArray())
+    .map(w => ({ id: w._id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' }));
   const t = await db.collection('tactical_profiles').findOne({ _id: 'avai-current' });
   out.tactical = t ? { text: t.modelText || '', formation: t.formation || '', pressing: t.pressing || '' } : {};
   out.roles = (t && t.roles) || [];
@@ -109,6 +112,24 @@ async function saveTactical(fields) {
   const soi = { clubId: CLUB_ID, createdAt: now };
   if (!has(fields, 'roles')) soi.roles = [];
   await db.collection('tactical_profiles').updateOne({ _id: 'avai-current' }, { $set: Object.assign({}, fields, { updatedAt: now }), $setOnInsert: soi }, { upsert: true });
+}
+
+// Widgets do SofaScore: só um link validado de widgets.sofascore.com é gravado.
+const WIDGET_TARGETS = { player: 'players', club: 'clubs', competition: 'competitions', match: 'matches' };
+async function saveWidget(id, body) {
+  const r = parseWidget(body);
+  if (r.error) return { code: 400, error: r.error };
+  const w = r.value, target = db.collection(WIDGET_TARGETS[w.entityType]);
+  const ent = await target.findOne({ _id: w.entityId }, { projection: { externalIds: 1 } });
+  if (!ent) return { code: 404, error: 'entidade não encontrada' };
+  const now = new Date().toISOString();
+  await db.collection('sofascore_widgets').updateOne({ _id: id }, { $set: Object.assign({}, w, { updatedAt: now }),
+    $setOnInsert: { createdAt: now, sourceRefs: [{ sourceId: 'src-sofascore-widgets', collectedAt: today() }] } }, { upsert: true });
+  // O ID do SofaScore citado no link vira identificador externo da entidade (sem sobrescrever um já registrado).
+  const ext = ent.externalIds && typeof ent.externalIds === 'object' ? ent.externalIds : null;
+  if (w.sofascoreRef && w.sofascoreRef.entityType === w.entityType && !(ext && ext.sofascore))
+    await target.updateOne({ _id: w.entityId }, { $set: ext ? { 'externalIds.sofascore': w.sofascoreRef.id } : { externalIds: { sofascore: w.sofascoreRef.id } } });
+  return { code: 200, widget: { id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' } };
 }
 
 function readBody(req) {
@@ -137,6 +158,13 @@ async function api(req, res, parts) {
     if (!Array.isArray(b)) return send(res, 400, { error: 'roles deve ser array' });
     await saveTactical({ roles: b });
     return send(res, 200, { ok: true });
+  }
+  if (write && parts.length === 2 && parts[0] === 'widgets') {
+    const id = decodeURIComponent(parts[1]);
+    if (!/^[\w-]{1,80}$/.test(id)) return send(res, 400, { error: 'id inválido' });
+    if (m === 'DELETE') { await db.collection('sofascore_widgets').deleteOne({ _id: id }); return send(res, 200, { ok: true }); }
+    const r = await saveWidget(id, await readBody(req));
+    return send(res, r.code, r.error ? { error: r.error } : { ok: true, widget: r.widget });
   }
   if (write && parts.length === 2 && has(MAPS, parts[0])) {
     const id = decodeURIComponent(parts[1]);
@@ -178,5 +206,8 @@ const server = http.createServer(async (req, res) => {
   db = client.db(DB_NAME);
   await db.collection('sources').updateOne({ _id: MANUAL_SRC }, { $setOnInsert: { name: 'Cadastro manual (interface Scout Avaí)', type: 'manual', url: null, publisher: null,
     reliability: 'unverified', scope: 'Dados digitados na interface; exigem verificação.', usedInLoad: false, collectedAt: null } }, { upsert: true });
+  await db.collection('sources').updateOne({ _id: 'src-sofascore-widgets' }, { $setOnInsert: { name: 'Sofascore — widgets incorporados', type: 'embed', url: 'https://corporate.sofascore.com/br/widgets',
+    publisher: 'Sofascore', reliability: 'medium', scope: 'Widgets visuais (iframe) exibidos na interface. Os números ficam no SofaScore: não são gravados no banco nem lidos pela IA.',
+    usedInLoad: false, collectedAt: null } }, { upsert: true });
   server.listen(PORT, HOST, () => console.log('Scout Avaí em http://' + HOST + ':' + PORT + '  (banco: ' + DB_NAME + ')'));
 })().catch(e => { console.error('ERRO ao iniciar:', e.message); process.exit(1); });

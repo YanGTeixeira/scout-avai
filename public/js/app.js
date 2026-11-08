@@ -4,6 +4,7 @@ import { GROUPS, ORDER, rateStats } from './metrics.js';
 import { painel } from './painel.js';
 import { comparador } from './comparador.js';
 import { clube } from './clube.js';
+import { widgetSection } from './widgets.js';
 
 const COLS = [
   { k: 'shirt', t: 'Nº', num: true, cls: 'no' },
@@ -117,6 +118,7 @@ function openDrawer(p) {
     el('h3', {}, 'Cadastro'),
     list([['Clube', p.club], ['Nascimento', p.birth], ['Altura', p.height ? p.height + ' cm' : ''], ['Pé dominante', p.foot === 'Não informado' ? '' : p.foot], ['Status', p.status]]),
     el('h3', {}, 'Série B 2026'), ...stats, ...rates(p),
+    widgetSection(state, 'player', p.id),
     el('p', {}, el('button', { class: 'btn', onclick: () => { ui.cmp.a = p.id; closeDrawer(); location.hash = '#/comparador'; } }, 'Comparar com outro atleta')));
   drawer.classList.add('open'); scrim.classList.add('open');
   drawer.querySelector('.close').focus();
@@ -130,7 +132,7 @@ function closeDrawer() {
 function onKey(e) {
   if (e.key === 'Escape') return closeDrawer();
   if (e.key !== 'Tab') return;
-  const f = [...drawer.querySelectorAll('button,[href],input,select')];
+  const f = [...drawer.querySelectorAll('button,[href],input,select,textarea,summary,iframe')];
   if (!f.length) return;
   const first = f[0], last = f[f.length - 1];
   if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }

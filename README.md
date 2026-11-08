@@ -53,3 +53,13 @@ Requer Node.js 18+. Com Node 20.6+ também funciona `node --env-file=.env seed.j
 - Avaí — história e títulos: https://avai.com.br/clube/historia/
 - Avaí — Ressacada: https://avai.com.br/clube/ressacada/
 - CBF — Série B 2026 (complementar, não usada): https://www.cbf.com.br/futebol-brasileiro/times/campeonato-brasileiro/serie-b/2026/20058?tab=atletas
+
+## Widgets do SofaScore
+A interface exibe widgets oficiais do SofaScore (iframes gratuitos) na ficha do atleta, na página do clube e no painel (Série B).
+1. No sofascore.com, abra a página do atleta, time ou campeonato e use a opção de incorporar (embed).
+2. Na interface, abra "Adicionar widget do SofaScore", cole o código do iframe (ou o link) e salve.
+
+Só links `https://widgets.sofascore.com/...` são aceitos. O servidor guarda apenas o link validado na coleção `sofascore_widgets`. Quando o link traz o ID do SofaScore (ex.: `/player/971037`), ele é registrado em `externalIds.sofascore` da entidade.
+Os números do widget pertencem ao SofaScore: não são gravados na base nem usados nas análises.
+
+Testes: `npm test`.
