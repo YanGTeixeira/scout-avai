@@ -85,3 +85,16 @@ npm run sync:avai -- --force    # reprocessa mesmo se o site não mudou
 - **Dados:** Cadastro de atletas (inclusão, edição, importação por CSV) e Fontes e backup (exportação em JSON).
 
 Os módulos da antiga página `legado.html` foram incorporados a essas telas e gravam direto no MongoDB.
+
+## Assistente de IA (local, via Ollama)
+A aba **Assistente de IA** usa um modelo de linguagem rodando na sua máquina, sem enviar dados para a nuvem.
+```bash
+# 1. instale o Ollama: https://ollama.com/download
+ollama pull qwen2.5:7b      # baixa o modelo (uma vez, ~5 GB)
+node server.js              # o Ollama precisa estar aberto
+```
+- Modos: treinos da semana, táticas para treinar, esquemas táticos, jogadas ensaiadas, escalação e pergunta livre, com perguntas de acompanhamento.
+- A cada pedido o servidor monta um retrato do banco (elenco atual, estatísticas da Série B, idade, altura, modelo de jogo, requisitos por função, jogos, alvos e relatórios) e as limitações dos dados. O texto exato pode ser conferido em "Ver os dados enviados à IA".
+- A IA é instruída a não inventar dados, citar os números que usa, separar conhecimento geral de futebol do que vem dos dados e terminar com "O que conferir antes de usar". Toda resposta aparece marcada como sugestão.
+- As respostas ficam em `ai_sessions` e podem ser salvas em Relatórios (tipo "Sugestão da IA").
+- Outro modelo ou endereço: `OLLAMA_MODEL=llama3.1:8b OLLAMA_URL=http://outra-maquina:11434 node server.js`. Modelos maiores (14B ou mais) costumam dar respostas melhores, mas pedem mais memória. O tamanho do contexto pode ser ajustado com `OLLAMA_NUM_CTX` (padrão 8192).

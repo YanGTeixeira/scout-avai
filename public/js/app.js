@@ -10,6 +10,7 @@ import { relatorios } from './relatorios.js';
 import { modelo } from './modelo.js';
 import { atletas } from './atletas.js';
 import { fontes } from './fontes.js';
+import { ia } from './ia.js';
 import { widgetSection } from './widgets.js';
 
 const COLS = [
@@ -160,6 +161,7 @@ const routes = {
   elenco: ['Elenco atual', asOfLine, elenco],
   perfil: ['Perfil do elenco', () => 'Idade, utilização, origem e físico do elenco profissional.', (c) => perfil(c)],
   comparador: ['Comparador', () => 'Dois atletas lado a lado, com os dados disponíveis na fonte.', () => comparador(all, ui.cmp)],
+  ia: ['Assistente de IA', () => 'Sugestões de treinos, táticas, esquemas, jogadas ensaiadas e escalação a partir dos dados do sistema.', (c) => ia(c)],
   mercado: ['Alvos de mercado', () => 'Atletas de outros clubes em acompanhamento.', (c) => mercado(c)],
   relatorios: ['Relatórios', () => 'Pareceres de contratação, renovação e acompanhamento.', (c) => relatorios(c)],
   modelo: ['Modelo de jogo', () => 'Identidade de jogo e o que a comissão procura em cada função.', (c) => modelo(c)],

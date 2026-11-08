@@ -6,7 +6,7 @@ const COLLECTIONS = [
   'club_titles', 'club_history',
   'contracts', 'player_match_stats', 'player_season_stats',
   'scouting_reports', 'tactical_profiles', 'observations', 'obsidian_documents', 'sofascore_widgets',
-  'raw_payloads', 'sync_runs', 'field_conflicts',
+  'raw_payloads', 'sync_runs', 'field_conflicts', 'ai_sessions',
 ];
 
 // Campos "gerenciados pela fonte": o seed os atualiza a cada execução ($set).
@@ -110,6 +110,7 @@ const INDEXES = {
   sync_runs: [[{ source: 1, startedAt: -1 }, { name: 'source_started' }]],
   field_conflicts: [[{ entityType: 1, entityId: 1, field: 1 }, { name: 'entity_field' }], [{ status: 1 }, { name: 'status' }]],
   raw_payloads: [[{ provider: 1, fetchedAt: -1 }, { name: 'provider_fetched' }]],
+  ai_sessions: [[{ createdAt: -1 }, { name: 'created' }]],
 };
 
 module.exports = { COLLECTIONS, MANAGED_FIELDS, VALIDATORS, INDEXES };

@@ -1,8 +1,9 @@
 import { el } from './util.js';
 import { saveItem, deleteItem, newId } from './api.js';
 import { formDialog, toast } from './ui.js';
+import { renderMarkdown } from './ia.js';
 
-const TYPES = ['Contratação', 'Renovação', 'Acompanhamento', 'Avaliação de desempenho', 'Adversário'];
+const TYPES = ['Contratação', 'Renovação', 'Acompanhamento', 'Avaliação de desempenho', 'Adversário', 'Sugestão da IA'];
 const VERDICTS = ['Contratar', 'Monitorar', 'Renovar', 'Não avançar', 'Sem parecer'];
 const fields = (names) => [
   { name: 'title', label: 'Título', required: true },
@@ -30,7 +31,7 @@ export function relatorios({ state, refresh, setActions }) {
       el('div', {}, el('span', { class: 'tag' }, r.type || 'Relatório')),
       el('h3', {}, r.title),
       el('p', { class: 'meta' }, [r.date, r.player || 'Sem atleta vinculado'].filter(Boolean).join(', ')),
-      el('p', {}, r.evidence),
+      r.type === 'Sugestão da IA' ? el('details', {}, el('summary', {}, 'Ver sugestão completa'), renderMarkdown(r.evidence || '')) : el('p', {}, r.evidence),
       el('p', { class: 'verdict' }, `Parecer: ${r.recommendation || 'não definido'}`),
       el('p', { class: 'meta' }, `Fontes: ${r.sources || 'não informadas'}`),
       el('footer', {}, el('span'), el('span', {}, el('button', { class: 'btn small', onclick: () => edit(r) }, 'Editar'), ' ', el('button', { class: 'btn small danger', onclick: del(r) }, 'Excluir')))))

@@ -6,6 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const { MongoClient } = require('mongodb');
 const { parseWidget } = require('./lib/sofascore-widget');
+const { buildTeamContext } = require('./lib/ai/context');
+const { buildMessages, MODES } = require('./lib/ai/prompts');
+const ollama = require('./lib/ai/ollama');
 
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '127.0.0.1'; // só a sua máquina; não há autenticação
@@ -154,6 +157,32 @@ async function saveWidget(id, body) {
   return { code: 200, widget: { id, entityType: w.entityType, entityId: w.entityId, src: w.src, height: w.height, title: w.title || '' } };
 }
 
+// Assistente de IA local (Ollama): monta o contexto do banco a cada pergunta e devolve a resposta em streaming.
+async function aiChat(req, res) {
+  const b = await readBody(req);
+  const mode = MODES[b.mode] ? b.mode : 'livre';
+  const question = String(b.question || '').slice(0, 4000);
+  if (mode === 'livre' && !question.trim()) return send(res, 400, { error: 'Escreva uma pergunta.' });
+  const history = Array.isArray(b.history) ? b.history.slice(-12) : [];
+  const st = await ollama.status();
+  if (!st.online) return send(res, 503, { error: `${st.error} Inicie o Ollama (ollama serve) e tente de novo.` });
+  if (!st.modelInstalled) return send(res, 503, { error: `O modelo ${st.model} não está instalado. Rode: ollama pull ${st.model}` });
+  const context = await buildTeamContext(db);
+  const messages = buildMessages({ mode, question, history, context, opponent: b.opponent ? String(b.opponent).slice(0, 80) : null, formation: b.formation ? String(b.formation).slice(0, 20) : null });
+  const ctrl = new AbortController();
+  res.on('close', () => { if (!res.writableEnded) ctrl.abort(); });
+  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-AI-Model': st.model });
+  let answer = '';
+  try {
+    for await (const piece of ollama.chat(messages, { signal: ctrl.signal })) { answer += piece; res.write(piece); }
+  } catch (e) {
+    if (!ctrl.signal.aborted) res.write(`\n\n[Erro da IA local: ${e.message}]`);
+  }
+  res.end();
+  if (answer) await db.collection('ai_sessions').insertOne({ _id: 'ai-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), authorType: 'ai',
+    mode, question, answer, model: st.model, contextSummary: context.summary, createdAt: new Date().toISOString() }).catch(e => console.error('ai_sessions:', e.message));
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let size = 0; const chunks = [];
@@ -168,7 +197,16 @@ async function api(req, res, parts) {
   const m = req.method;
   const write = m === 'PUT' || m === 'DELETE';
   // Bloqueia requisições "simples" vindas de outras páginas: escrita só com JSON.
-  if (m === 'PUT' && String(req.headers['content-type'] || '').indexOf('application/json') !== 0) return send(res, 415, { error: 'use application/json' });
+  if ((m === 'PUT' || m === 'POST') && String(req.headers['content-type'] || '').indexOf('application/json') !== 0) return send(res, 415, { error: 'use application/json' });
+  if (parts[0] === 'ai') {
+    if (m === 'GET' && parts[1] === 'status') {
+      const ctx = await buildTeamContext(db);
+      return send(res, 200, { ollama: await ollama.status(), summary: ctx.summary, limitations: ctx.limitations, modes: Object.fromEntries(Object.entries(MODES).map(([k, v]) => [k, v.label])) });
+    }
+    if (m === 'GET' && parts[1] === 'context') return send(res, 200, await buildTeamContext(db));
+    if (m === 'GET' && parts[1] === 'sessions') return send(res, 200, (await db.collection('ai_sessions').find({}).sort({ createdAt: -1 }).limit(20).toArray()));
+    if (m === 'POST' && parts[1] === 'chat') return await aiChat(req, res);
+  }
   if (m === 'GET' && parts[0] === 'state') return send(res, 200, await getState());
   if (m === 'PUT' && parts[0] === 'tactical') {
     const b = await readBody(req);
